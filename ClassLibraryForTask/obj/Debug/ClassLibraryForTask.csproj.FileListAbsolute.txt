@@ -1,0 +1,14 @@
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\ClassLibraryForTask.dll.config
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\ClassLibraryForTask.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\ClassLibraryForTask.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\EntityFramework.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\HtmlAgilityPack.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\EntityFramework.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\HtmlAgilityPack.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\obj\Debug\ClassLibraryForTask.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\obj\Debug\ClassLibraryForTask.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\bin\Debug\StructureMap.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibraryForTask\obj\Debug\ClassLibraryForTask.csprojResolveAssemblyReference.cache

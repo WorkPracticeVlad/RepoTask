@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FistTaskModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CssLinks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Css" Type="nvarchar(max)" />
+          <Property Name="Fk_PageUrls_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExternalUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Fk_PageUrls_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImgSources">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Scr" Type="nvarchar(max)" />
+          <Property Name="Fk_PageUrls_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InternalUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Fk_PageUrls_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PageUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LoadTime" Type="int" />
+          <Property Name="HtmlSize" Type="int" />
+        </EntityType>
+        <Association Name="FK__CssLinks__Fk_Pag__25869641">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="CssLinks" Type="Self.CssLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CssLinks">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExternalU__Fk_Pa__2E1BDC42">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="ExternalUrls" Type="Self.ExternalUrls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUrls">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ImgSource__Fk_Pa__286302EC">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="ImgSources" Type="Self.ImgSources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ImgSources">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__InternalU__Fk_Pa__2B3F6F97">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="InternalUrls" Type="Self.InternalUrls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InternalUrls">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FistTaskModelStoreContainer">
+          <EntitySet Name="CssLinks" EntityType="Self.CssLinks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExternalUrls" EntityType="Self.ExternalUrls" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImgSources" EntityType="Self.ImgSources" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InternalUrls" EntityType="Self.InternalUrls" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PageUrls" EntityType="Self.PageUrls" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CssLinks__Fk_Pag__25869641" Association="Self.FK__CssLinks__Fk_Pag__25869641">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="CssLinks" EntitySet="CssLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExternalU__Fk_Pa__2E1BDC42" Association="Self.FK__ExternalU__Fk_Pa__2E1BDC42">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="ExternalUrls" EntitySet="ExternalUrls" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ImgSource__Fk_Pa__286302EC" Association="Self.FK__ImgSource__Fk_Pa__286302EC">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="ImgSources" EntitySet="ImgSources" />
+          </AssociationSet>
+          <AssociationSet Name="FK__InternalU__Fk_Pa__2B3F6F97" Association="Self.FK__InternalU__Fk_Pa__2B3F6F97">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="InternalUrls" EntitySet="InternalUrls" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FistTaskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CssLinks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Css" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PageUrls" Relationship="Self.FK__CssLinks__Fk_Pag__25869641" FromRole="CssLinks" ToRole="PageUrls" />
+        </EntityType>
+        <EntityType Name="ExternalUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PageUrls" Relationship="Self.FK__ExternalU__Fk_Pa__2E1BDC42" FromRole="ExternalUrls" ToRole="PageUrls" />
+        </EntityType>
+        <EntityType Name="ImgSources">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Scr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PageUrls" Relationship="Self.FK__ImgSource__Fk_Pa__286302EC" FromRole="ImgSources" ToRole="PageUrls" />
+        </EntityType>
+        <EntityType Name="InternalUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PageUrls" Relationship="Self.FK__InternalU__Fk_Pa__2B3F6F97" FromRole="InternalUrls" ToRole="PageUrls" />
+        </EntityType>
+        <EntityType Name="PageUrls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoadTime" Type="Int32" />
+          <Property Name="HtmlSize" Type="Int32" />
+          <NavigationProperty Name="CssLinks" Relationship="Self.FK__CssLinks__Fk_Pag__25869641" FromRole="PageUrls" ToRole="CssLinks" />
+          <NavigationProperty Name="ExternalUrls" Relationship="Self.FK__ExternalU__Fk_Pa__2E1BDC42" FromRole="PageUrls" ToRole="ExternalUrls" />
+          <NavigationProperty Name="ImgSources" Relationship="Self.FK__ImgSource__Fk_Pa__286302EC" FromRole="PageUrls" ToRole="ImgSources" />
+          <NavigationProperty Name="InternalUrls" Relationship="Self.FK__InternalU__Fk_Pa__2B3F6F97" FromRole="PageUrls" ToRole="InternalUrls" />
+        </EntityType>
+        <Association Name="FK__CssLinks__Fk_Pag__25869641">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="CssLinks" Type="Self.CssLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CssLinks">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExternalU__Fk_Pa__2E1BDC42">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="ExternalUrls" Type="Self.ExternalUrls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExternalUrls">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ImgSource__Fk_Pa__286302EC">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="ImgSources" Type="Self.ImgSources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ImgSources">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__InternalU__Fk_Pa__2B3F6F97">
+          <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+          <End Role="InternalUrls" Type="Self.InternalUrls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PageUrls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InternalUrls">
+              <PropertyRef Name="Fk_PageUrls_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FistTaskEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CssLinks" EntityType="Self.CssLinks" />
+          <EntitySet Name="ExternalUrls" EntityType="Self.ExternalUrls" />
+          <EntitySet Name="ImgSources" EntityType="Self.ImgSources" />
+          <EntitySet Name="InternalUrls" EntityType="Self.InternalUrls" />
+          <EntitySet Name="PageUrls" EntityType="Self.PageUrls" />
+          <AssociationSet Name="FK__CssLinks__Fk_Pag__25869641" Association="Self.FK__CssLinks__Fk_Pag__25869641">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="CssLinks" EntitySet="CssLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExternalU__Fk_Pa__2E1BDC42" Association="Self.FK__ExternalU__Fk_Pa__2E1BDC42">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="ExternalUrls" EntitySet="ExternalUrls" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ImgSource__Fk_Pa__286302EC" Association="Self.FK__ImgSource__Fk_Pa__286302EC">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="ImgSources" EntitySet="ImgSources" />
+          </AssociationSet>
+          <AssociationSet Name="FK__InternalU__Fk_Pa__2B3F6F97" Association="Self.FK__InternalU__Fk_Pa__2B3F6F97">
+            <End Role="PageUrls" EntitySet="PageUrls" />
+            <End Role="InternalUrls" EntitySet="InternalUrls" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FistTaskModelStoreContainer" CdmEntityContainer="FistTaskEntities">
+          <EntitySetMapping Name="CssLinks">
+            <EntityTypeMapping TypeName="FistTaskModel.CssLinks">
+              <MappingFragment StoreEntitySet="CssLinks">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Css" ColumnName="Css" />
+                <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExternalUrls">
+            <EntityTypeMapping TypeName="FistTaskModel.ExternalUrls">
+              <MappingFragment StoreEntitySet="ExternalUrls">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImgSources">
+            <EntityTypeMapping TypeName="FistTaskModel.ImgSources">
+              <MappingFragment StoreEntitySet="ImgSources">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Scr" ColumnName="Scr" />
+                <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InternalUrls">
+            <EntityTypeMapping TypeName="FistTaskModel.InternalUrls">
+              <MappingFragment StoreEntitySet="InternalUrls">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PageUrls">
+            <EntityTypeMapping TypeName="FistTaskModel.PageUrls">
+              <MappingFragment StoreEntitySet="PageUrls">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="LoadTime" ColumnName="LoadTime" />
+                <ScalarProperty Name="HtmlSize" ColumnName="HtmlSize" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

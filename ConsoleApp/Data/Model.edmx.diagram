@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ec9e4d4001b4ac7880ab49c3152d0a4" Name="Diagram1">
+        <EntityTypeShape EntityType="FistTaskModel.CssLinks" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FistTaskModel.ExternalUrls" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FistTaskModel.ImgSources" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FistTaskModel.InternalUrls" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FistTaskModel.PageUrls" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="FistTaskModel.FK__CssLinks__Fk_Pag__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__ExternalU__Fk_Pa__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__ImgSource__Fk_Pa__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__InternalU__Fk_Pa__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

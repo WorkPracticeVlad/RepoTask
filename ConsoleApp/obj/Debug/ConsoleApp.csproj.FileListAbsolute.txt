@@ -1,0 +1,14 @@
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\HtmlAgilityPack.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\StructureMap.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\bin\Debug\HtmlAgilityPack.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache

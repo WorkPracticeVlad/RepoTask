@@ -1,0 +1,10 @@
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\WindowsServiceForeTask.exe.config
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\WindowsServiceForeTask.exe
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\WindowsServiceForeTask.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\obj\Debug\WindowsServiceForeTask.exe
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\obj\Debug\WindowsServiceForeTask.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\StructureMap.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\HtmlAgilityPack.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\HtmlAgilityPack.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\obj\Debug\WindowsServiceForeTask.csprojResolveAssemblyReference.cache

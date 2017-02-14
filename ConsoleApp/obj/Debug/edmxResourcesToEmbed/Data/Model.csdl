@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FistTaskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CssLinks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Css" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PageUrls" Relationship="Self.FK__CssLinks__Fk_Pag__25869641" FromRole="CssLinks" ToRole="PageUrls" />
+  </EntityType>
+  <EntityType Name="ExternalUrls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PageUrls" Relationship="Self.FK__ExternalU__Fk_Pa__2E1BDC42" FromRole="ExternalUrls" ToRole="PageUrls" />
+  </EntityType>
+  <EntityType Name="ImgSources">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Scr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PageUrls" Relationship="Self.FK__ImgSource__Fk_Pa__286302EC" FromRole="ImgSources" ToRole="PageUrls" />
+  </EntityType>
+  <EntityType Name="InternalUrls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fk_PageUrls_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PageUrls" Relationship="Self.FK__InternalU__Fk_Pa__2B3F6F97" FromRole="InternalUrls" ToRole="PageUrls" />
+  </EntityType>
+  <EntityType Name="PageUrls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoadTime" Type="Int32" />
+    <Property Name="HtmlSize" Type="Int32" />
+    <NavigationProperty Name="CssLinks" Relationship="Self.FK__CssLinks__Fk_Pag__25869641" FromRole="PageUrls" ToRole="CssLinks" />
+    <NavigationProperty Name="ExternalUrls" Relationship="Self.FK__ExternalU__Fk_Pa__2E1BDC42" FromRole="PageUrls" ToRole="ExternalUrls" />
+    <NavigationProperty Name="ImgSources" Relationship="Self.FK__ImgSource__Fk_Pa__286302EC" FromRole="PageUrls" ToRole="ImgSources" />
+    <NavigationProperty Name="InternalUrls" Relationship="Self.FK__InternalU__Fk_Pa__2B3F6F97" FromRole="PageUrls" ToRole="InternalUrls" />
+  </EntityType>
+  <Association Name="FK__CssLinks__Fk_Pag__25869641">
+    <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+    <End Role="CssLinks" Type="Self.CssLinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageUrls">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CssLinks">
+        <PropertyRef Name="Fk_PageUrls_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ExternalU__Fk_Pa__2E1BDC42">
+    <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+    <End Role="ExternalUrls" Type="Self.ExternalUrls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageUrls">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExternalUrls">
+        <PropertyRef Name="Fk_PageUrls_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImgSource__Fk_Pa__286302EC">
+    <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+    <End Role="ImgSources" Type="Self.ImgSources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageUrls">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ImgSources">
+        <PropertyRef Name="Fk_PageUrls_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InternalU__Fk_Pa__2B3F6F97">
+    <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
+    <End Role="InternalUrls" Type="Self.InternalUrls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageUrls">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InternalUrls">
+        <PropertyRef Name="Fk_PageUrls_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FistTaskEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CssLinks" EntityType="Self.CssLinks" />
+    <EntitySet Name="ExternalUrls" EntityType="Self.ExternalUrls" />
+    <EntitySet Name="ImgSources" EntityType="Self.ImgSources" />
+    <EntitySet Name="InternalUrls" EntityType="Self.InternalUrls" />
+    <EntitySet Name="PageUrls" EntityType="Self.PageUrls" />
+    <AssociationSet Name="FK__CssLinks__Fk_Pag__25869641" Association="Self.FK__CssLinks__Fk_Pag__25869641">
+      <End Role="PageUrls" EntitySet="PageUrls" />
+      <End Role="CssLinks" EntitySet="CssLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ExternalU__Fk_Pa__2E1BDC42" Association="Self.FK__ExternalU__Fk_Pa__2E1BDC42">
+      <End Role="PageUrls" EntitySet="PageUrls" />
+      <End Role="ExternalUrls" EntitySet="ExternalUrls" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImgSource__Fk_Pa__286302EC" Association="Self.FK__ImgSource__Fk_Pa__286302EC">
+      <End Role="PageUrls" EntitySet="PageUrls" />
+      <End Role="ImgSources" EntitySet="ImgSources" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InternalU__Fk_Pa__2B3F6F97" Association="Self.FK__InternalU__Fk_Pa__2B3F6F97">
+      <End Role="PageUrls" EntitySet="PageUrls" />
+      <End Role="InternalUrls" EntitySet="InternalUrls" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

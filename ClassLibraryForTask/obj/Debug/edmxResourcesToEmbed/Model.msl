@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FistTaskModelStoreContainer" CdmEntityContainer="FistTaskEntities">
+    <EntitySetMapping Name="CssLink">
+      <EntityTypeMapping TypeName="FistTaskModel.CssLink">
+        <MappingFragment StoreEntitySet="CssLink">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Css" ColumnName="Css" />
+          <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExternalUrl">
+      <EntityTypeMapping TypeName="FistTaskModel.ExternalUrl">
+        <MappingFragment StoreEntitySet="ExternalUrl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImgSource">
+      <EntityTypeMapping TypeName="FistTaskModel.ImgSource">
+        <MappingFragment StoreEntitySet="ImgSource">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Scr" ColumnName="Scr" />
+          <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternalUrl">
+      <EntityTypeMapping TypeName="FistTaskModel.InternalUrl">
+        <MappingFragment StoreEntitySet="InternalUrl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Fk_PageUrls_Id" ColumnName="Fk_PageUrls_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PageUrl">
+      <EntityTypeMapping TypeName="FistTaskModel.PageUrl">
+        <MappingFragment StoreEntitySet="PageUrl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="LoadTime" ColumnName="LoadTime" />
+          <ScalarProperty Name="HtmlSize" ColumnName="HtmlSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
