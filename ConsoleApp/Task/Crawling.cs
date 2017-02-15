@@ -15,6 +15,7 @@ namespace ConsoleApp.Task
         static BlockingCollection<PageUrls> listOfCrawledUrls = new BlockingCollection<PageUrls>();
         static BlockingCollection<string> urls = new BlockingCollection<string>();
         static BlockingCollection<Queue<PageUrls>> listOfQueue = new BlockingCollection<Queue<PageUrls>>();
+        static int iterator=0;
         Random rand = new Random();
         private IRepository _repo;
         public Crawling(IRepository repo)
@@ -60,8 +61,7 @@ namespace ConsoleApp.Task
                 {
                     res = m.TakeMesuares(fullUrl);
                     queue.Enqueue(res);
-                    Monitor.Pulse(queue);             
-                    Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Put in queue" + fullUrl);
+                    Monitor.Pulse(queue);                                 
                 }
             }
             return res;
@@ -72,7 +72,8 @@ namespace ConsoleApp.Task
             {
                 foreach (var url in r.InternalUrls)
                 {
-                    CrawlOneUrlProducer(url.Url, queue);
+                    if (urls.Contains(r.Url))
+                        CrawlOneUrlProducer(url.Url, queue);
                 }
             }
         }
@@ -82,6 +83,7 @@ namespace ConsoleApp.Task
             {
                 foreach (var url in r.ExternalUrls)
                 {
+                    if(urls.Contains(r.Url))
                     CrawlOneUrlProducer(url.Url, queue);
                 }
             }
@@ -94,7 +96,7 @@ namespace ConsoleApp.Task
             for (int i = 0; i < listOfCrawledUrls.Count; i++)
             {
                 var temp = listOfCrawledUrls.ElementAt(i);
-                var random = rand.Next(2, 4);
+                var random = rand.Next(1, 4);              
                 if (random % 2 == 0)
                 {
                     CrawlInternalUrls(temp,queue);
@@ -105,25 +107,23 @@ namespace ConsoleApp.Task
                     CrawlExternalUrls(temp, queue);
                     CrawlInternalUrls(temp, queue);
                 }
-                if (i == 1)
-                {
-                    int x = i;
-                }
+                iterator = i;
             }
         }
         void Consumer(Queue<PageUrls> queue)
         {
             while (true)
             {
-                lock(queue) //(sharedQueue)
+                lock(queue) 
                 {
-                    while (queue.Count == 0)//(sharedQueue.Count == 0)
+                    while (queue.Count == 0)
                         Monitor.Wait(queue);
                     var res = queue.Dequeue();
-                    if(!urls.Any(r => r == res.Url) && !listOfCrawledUrls.Any(r=>r.Url== res.Url))
+                    string temp = res.Url;
+                    if (!urls.Contains(temp) && !listOfCrawledUrls.Any(r=>r.Url== temp))
                     {
-                        listOfCrawledUrls.Add(res);
-                        urls.Add(res.Url);
+                        listOfCrawledUrls.TryAdd(res);
+                        urls.Add(temp);
                     }                  
                     Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Processing to list url: " + res.Url);
                 }
@@ -131,20 +131,21 @@ namespace ConsoleApp.Task
         }
         void ConsumerDbContext()
         {
-            if (listOfCrawledUrls.Count == 0)
-                Thread.Sleep(3000);
-            while (listOfCrawledUrls.Count != 0)
-            {
-                int count = listOfCrawledUrls.Count;
-                IEnumerable<PageUrls> items = listOfCrawledUrls.Take(count).ToArray();
-                _repo.Add(items);
-                for (int i = 0; i < count; i++)
+            while(iterator<1)
+                while (listOfCrawledUrls.Count != 0)
                 {
-                    listOfCrawledUrls.Take();
-                }
-                Console.WriteLine("Saving to DB");
-                Thread.Sleep(20000);
-            }
+                if (iterator!=0&& iterator%2==0)
+                {
+                    IEnumerable<PageUrls> items = listOfCrawledUrls.Take(2).ToArray();
+                    for (int i = 0; i < 2; i++)
+                    {
+                        listOfCrawledUrls.Take();
+                    }
+                    _repo.Add(items);
+                    Console.WriteLine("Saving to DB " + 2);
+                }                
+                    Thread.Sleep(2000);
+                }         
         }
     }
 }
