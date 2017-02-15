@@ -22,8 +22,7 @@ namespace ConsoleApp.Task
                 watcher.EnableRaisingEvents = true;
         }
         void OnChanged(object source, FileSystemEventArgs e)
-        {
-            //var wt = (FileSystemWatcher)source;
+        {            
             watcher.EnableRaisingEvents = false;
             while (IsFileLocked(@"C:\Users\vorlov\Desktop\FistTaskStart\Command.txt"))
             {
@@ -33,9 +32,8 @@ namespace ConsoleApp.Task
             string[] splitCommand = command.Split();
             using (var rep = new Repository(new FistTaskEntities()))
             {
-
-                //var tb = new SiteTreeBuilder(rep);
-                //tb.WatchFolder("C:\\Users\\vorlov\\Desktop\\BuildTree");
+                var tb = new SiteTreeBuilder(rep);
+                tb.WatchFolder("C:\\Users\\vorlov\\Desktop\\BuildTree");
                 var pr = new Crawling(rep);
                 pr.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1]));
             }
