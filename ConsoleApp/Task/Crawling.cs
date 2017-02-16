@@ -15,6 +15,7 @@ namespace ConsoleApp.Task
         static ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
         static ConcurrentDictionary<string, string> urls = new ConcurrentDictionary<string, string>();
         static ConcurrentDictionary<string, string> urlsDB = new ConcurrentDictionary<string, string>();
+        static ConcurrentDictionary<string, string> urlsDBSaved = new ConcurrentDictionary<string, string>();
         static BlockingCollection<Queue<PageUrls>> listOfQueue = new BlockingCollection<Queue<PageUrls>>();
         Random rand = new Random();
         private IRepository _repo;
@@ -103,18 +104,9 @@ namespace ConsoleApp.Task
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
                 var temp = dicitonaryOfCrawledUrls.ElementAt(threadName);
-                //var random = rand.Next(1, 4);
-                //    if (random % 2 == 0)
-                //    {
                         CrawlInternalUrls(temp.Value, queue);
-                        CrawlExternalUrls(temp.Value, queue);
-                    //}
-                    //else
-                    //{
-                    //    CrawlExternalUrls(temp.Value, queue);
-                    //    CrawlInternalUrls(temp.Value, queue);
-                    //}             
-                if (!urlsDB.ContainsKey(temp.Key))
+                        CrawlExternalUrls(temp.Value, queue);            
+                if (!urlsDBSaved.ContainsKey(temp.Key))
                 {
                     urlsDB.TryAdd(temp.Key, temp.Key);
                 }
@@ -144,7 +136,7 @@ namespace ConsoleApp.Task
             while (true)
                 while (dicitonaryOfCrawledUrls.Count != 0)
                 {
-                    if (urlsDB.Count > 9)
+                    if (urlsDB.Count > 1)
                     {
                         var items = urlsDB.Keys.ToArray();
                         BlockingCollection<PageUrls> itemsDB=new BlockingCollection<PageUrls>();
@@ -153,11 +145,12 @@ namespace ConsoleApp.Task
                             PageUrls p;
                             string s;                           
                             dicitonaryOfCrawledUrls.TryRemove(item, out p);
+                            urlsDBSaved.TryAdd(item, item);
                             urlsDB.TryRemove(item, out s);
-                            itemsDB.TryAdd(p);
+                            itemsDB.TryAdd(p);     
                         }
                         _repo.Add(itemsDB);
-                        Console.WriteLine("Saving to DB " );
+                        Console.WriteLine("Saving to DB ");
                     }
                     Thread.Sleep(4000);
                 }

@@ -20,7 +20,7 @@ namespace ConsoleApp
                 //var tb = new SiteTreeBuilder(rep);
                 //tb.WatchFolder("C:\\Users\\vorlov\\Desktop\\BuildTree");
                 var pr = new Crawling(rep);
-                pr.StartCrawl("https://www.site-do.ru/db/db.php", 6);
+                pr.StartCrawl("https://www.google.com.ua/", 10);
             }
         }
     }
