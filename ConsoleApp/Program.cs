@@ -12,9 +12,16 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var wt = new WatcherForCommand();
-            wt.WatchFolder("C:\\Users\\vorlov\\Desktop\\FistTaskStart");
-            Console.ReadKey();
+            //var wt = new WatcherForCommand();
+            //wt.WatchFolder("C:\\Users\\vorlov\\Desktop\\FistTaskStart");
+            //Console.ReadKey();
+            using (var rep = new Repository(new FistTaskEntities()))
+            {
+                //var tb = new SiteTreeBuilder(rep);
+                //tb.WatchFolder("C:\\Users\\vorlov\\Desktop\\BuildTree");
+                var pr = new Crawling(rep);
+                pr.StartCrawl("https://www.site-do.ru/db/db.php", 6);
+            }
         }
     }
 }

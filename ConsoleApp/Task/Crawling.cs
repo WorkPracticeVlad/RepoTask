@@ -12,10 +12,10 @@ namespace ConsoleApp.Task
 {
     class Crawling
     {
-        static BlockingCollection<PageUrls> listOfCrawledUrls = new BlockingCollection<PageUrls>();
-        static BlockingCollection<string> urls = new BlockingCollection<string>();
+        static ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
+        static ConcurrentDictionary<string, string> urls = new ConcurrentDictionary<string, string>();
+        static ConcurrentDictionary<string, string> urlsDB = new ConcurrentDictionary<string, string>();
         static BlockingCollection<Queue<PageUrls>> listOfQueue = new BlockingCollection<Queue<PageUrls>>();
-        static int iterator=0;
         Random rand = new Random();
         private IRepository _repo;
         public Crawling(IRepository repo)
@@ -34,18 +34,20 @@ namespace ConsoleApp.Task
             for (int i = 0; i < halfOfThreads; i++)
             {
                 var iteratorQueue = listOfQueue.ElementAt(i);
-                threads[i]= new Thread(() => StartCrawlOneThread(url, iteratorQueue));
-                threads[i+halfOfThreads]= new Thread(() => Consumer(iteratorQueue));
+                threads[i] = new Thread(() => StartCrawlOneThread(url, iteratorQueue));
+                threads[i].Name = i.ToString();
+                threads[i + halfOfThreads] = new Thread(() => Consumer(iteratorQueue));
                 threads[i].Start();
-                threads[i+halfOfThreads].Start();
+                threads[i + halfOfThreads].Start();
             }
             if (threads.Length % 2 != 0)
             {
                 var iteratorQueue = listOfQueue.ElementAt(0);
                 threads[threads.Length - 1] = new Thread(() => StartCrawlOneThread(url, iteratorQueue));
+                threads[threads.Length - 1].Name = (threads.Length - 1).ToString();
                 threads[threads.Length - 1].Start();
             }
-                
+
             for (int i = 0; i < threads.Length; i++)
             {
                 threads[i].Join();
@@ -55,13 +57,13 @@ namespace ConsoleApp.Task
         {
             Measures m = new Measures();
             var res = new PageUrls();
-            lock(queue) 
+            lock (queue)
             {
-                if (!urls.Any(r => r == fullUrl)&& !queue.Any(r => r.Url == fullUrl))
+                if (!urls.ContainsKey(fullUrl) && !queue.Any(r => r.Url == fullUrl))
                 {
                     res = m.TakeMesuares(fullUrl);
                     queue.Enqueue(res);
-                    Monitor.Pulse(queue);                                 
+                    Monitor.Pulse(queue);
                 }
             }
             return res;
@@ -72,7 +74,7 @@ namespace ConsoleApp.Task
             {
                 foreach (var url in r.InternalUrls)
                 {
-                    if (urls.Contains(r.Url))
+                    if (!urls.ContainsKey(url.Url))
                         CrawlOneUrlProducer(url.Url, queue);
                 }
             }
@@ -83,69 +85,82 @@ namespace ConsoleApp.Task
             {
                 foreach (var url in r.ExternalUrls)
                 {
-                    if(urls.Contains(r.Url))
-                    CrawlOneUrlProducer(url.Url, queue);
+                    if (!urls.ContainsKey(url.Url))
+                        CrawlOneUrlProducer(url.Url, queue);
                 }
             }
         }
         void StartCrawlOneThread(string url, Queue<PageUrls> queue)
         {
-            var r = CrawlOneUrlProducer(url,queue);
-            CrawlInternalUrls(r,queue);
-            CrawlExternalUrls(r, queue);
-            for (int i = 0; i < listOfCrawledUrls.Count; i++)
+            int threadName = Int32.Parse(Thread.CurrentThread.Name);
+            var res = CrawlOneUrlProducer(url, queue);
+            CrawlInternalUrls(res, queue);
+            CrawlExternalUrls(res, queue);
+            if (!urlsDB.ContainsKey(res.Url))
             {
-                var temp = listOfCrawledUrls.ElementAt(i);
-                var random = rand.Next(1, 4);              
-                if (random % 2 == 0)
+                urlsDB.TryAdd(res.Url, res.Url);
+            }           
+            while (!dicitonaryOfCrawledUrls.IsEmpty)
+            {
+                var temp = dicitonaryOfCrawledUrls.ElementAt(threadName);
+                //var random = rand.Next(1, 4);
+                //    if (random % 2 == 0)
+                //    {
+                        CrawlInternalUrls(temp.Value, queue);
+                        CrawlExternalUrls(temp.Value, queue);
+                    //}
+                    //else
+                    //{
+                    //    CrawlExternalUrls(temp.Value, queue);
+                    //    CrawlInternalUrls(temp.Value, queue);
+                    //}             
+                if (!urlsDB.ContainsKey(temp.Key))
                 {
-                    CrawlInternalUrls(temp,queue);
-                    CrawlExternalUrls(temp, queue);
+                    urlsDB.TryAdd(temp.Key, temp.Key);
                 }
-                else
-                {
-                    CrawlExternalUrls(temp, queue);
-                    CrawlInternalUrls(temp, queue);
-                }
-                iterator = i;
             }
         }
         void Consumer(Queue<PageUrls> queue)
         {
             while (true)
             {
-                lock(queue) 
+                lock (queue)
                 {
                     while (queue.Count == 0)
                         Monitor.Wait(queue);
                     var res = queue.Dequeue();
                     string temp = res.Url;
-                    if (!urls.Contains(temp) && !listOfCrawledUrls.Any(r=>r.Url== temp))
+                    if (!urls.ContainsKey(temp) && !dicitonaryOfCrawledUrls.Any(r => r.Key == temp))
                     {
-                        listOfCrawledUrls.TryAdd(res);
-                        urls.Add(temp);
-                    }                  
+                        dicitonaryOfCrawledUrls.TryAdd(res.Url, res);
+                        urls.TryAdd(temp, temp);
+                    }
                     Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Processing to list url: " + res.Url);
                 }
             }
         }
         void ConsumerDbContext()
         {
-            while(iterator<1)
-                while (listOfCrawledUrls.Count != 0)
+            while (true)
+                while (dicitonaryOfCrawledUrls.Count != 0)
                 {
-                if (iterator!=0&& iterator%2==0)
-                {
-                    IEnumerable<PageUrls> items = listOfCrawledUrls.Take(2).ToArray();
-                    for (int i = 0; i < 2; i++)
+                    if (urlsDB.Count > 9)
                     {
-                        listOfCrawledUrls.Take();
+                        var items = urlsDB.Keys.ToArray();
+                        BlockingCollection<PageUrls> itemsDB=new BlockingCollection<PageUrls>();
+                        foreach (var item in items)
+                        {
+                            PageUrls p;
+                            string s;                           
+                            dicitonaryOfCrawledUrls.TryRemove(item, out p);
+                            urlsDB.TryRemove(item, out s);
+                            itemsDB.TryAdd(p);
+                        }
+                        _repo.Add(itemsDB);
+                        Console.WriteLine("Saving to DB " );
                     }
-                    _repo.Add(items);
-                    Console.WriteLine("Saving to DB " + 2);
-                }                
-                    Thread.Sleep(2000);
-                }         
+                    Thread.Sleep(4000);
+                }
         }
     }
 }
