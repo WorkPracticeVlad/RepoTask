@@ -17,6 +17,11 @@ namespace ConsoleApp.Data
         {
             _ctx.PageUrls.AddRange(items);
             _ctx.SaveChanges();
+            //foreach (var item in items)
+            //{
+            //    _ctx.PageUrls.Add(item);
+            //    _ctx.SaveChanges();
+            //}          
         }
         public void Dispose()
         {

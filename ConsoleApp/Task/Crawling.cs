@@ -12,11 +12,10 @@ namespace ConsoleApp.Task
 {
     class Crawling
     {
-        static ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
-        static ConcurrentDictionary<string, string> urls = new ConcurrentDictionary<string, string>();
-        static ConcurrentDictionary<string, string> urlsDB = new ConcurrentDictionary<string, string>();
-        static ConcurrentDictionary<string, string> urlsDBSaved = new ConcurrentDictionary<string, string>();
-        static BlockingCollection<Queue<PageUrls>> listOfQueue = new BlockingCollection<Queue<PageUrls>>();
+        ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
+        ConcurrentDictionary<string, string> urls = new ConcurrentDictionary<string, string>();
+        ConcurrentDictionary<string, string> urlsDB = new ConcurrentDictionary<string, string>();
+        BlockingCollection<Queue<PageUrls>> listOfQueue = new BlockingCollection<Queue<PageUrls>>();
         Random rand = new Random();
         private IRepository _repo;
         public Crawling(IRepository repo)
@@ -100,13 +99,13 @@ namespace ConsoleApp.Task
             if (!urlsDB.ContainsKey(res.Url))
             {
                 urlsDB.TryAdd(res.Url, res.Url);
-            }           
+            }
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
                 var temp = dicitonaryOfCrawledUrls.ElementAt(threadName);
-                        CrawlInternalUrls(temp.Value, queue);
-                        CrawlExternalUrls(temp.Value, queue);            
-                if (!urlsDBSaved.ContainsKey(temp.Key))
+                CrawlInternalUrls(temp.Value, queue);
+                CrawlExternalUrls(temp.Value, queue);
+                if (!urlsDB.ContainsKey(temp.Key))
                 {
                     urlsDB.TryAdd(temp.Key, temp.Key);
                 }
@@ -136,24 +135,28 @@ namespace ConsoleApp.Task
             while (true)
                 while (dicitonaryOfCrawledUrls.Count != 0)
                 {
-                    if (urlsDB.Count > 1)
+                    if (dicitonaryOfCrawledUrls.Count>10)
                     {
-                        var items = urlsDB.Keys.ToArray();
-                        BlockingCollection<PageUrls> itemsDB=new BlockingCollection<PageUrls>();
-                        foreach (var item in items)
+                        PageUrls[] items = new PageUrls[urlsDB.Count];
+                       
+                        for (int i = 0; i <items.Length; i++)
                         {
-                            PageUrls p;
-                            string s;                           
-                            dicitonaryOfCrawledUrls.TryRemove(item, out p);
-                            urlsDBSaved.TryAdd(item, item);
-                            urlsDB.TryRemove(item, out s);
-                            itemsDB.TryAdd(p);     
+                            if (dicitonaryOfCrawledUrls.ContainsKey(urlsDB.ElementAt(i).Key))
+                            {
+                               
+                                dicitonaryOfCrawledUrls.TryRemove(dicitonaryOfCrawledUrls.First(p => p.Key == urlsDB.ElementAt(i).Key).Key,
+                                   out items[i]);
+                            }
                         }
-                        _repo.Add(itemsDB);
+                        items = items.Where(c => c != null).ToArray();
+                        _repo.Add(items.ToList());
                         Console.WriteLine("Saving to DB ");
+                        Thread.Sleep(4000);
                     }
-                    Thread.Sleep(4000);
+
                 }
+
         }
     }
 }
+
