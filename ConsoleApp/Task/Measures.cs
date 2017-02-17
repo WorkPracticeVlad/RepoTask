@@ -92,7 +92,7 @@ namespace ConsoleApp.Task
         }
         List<string> UrlsClean(List<string> hrefs, string url)
         {
-            Uri myUri = new Uri(url);
+            var myUri = new Uri(url);
             var protocol = myUri.Scheme;
             string host = myUri.Host;
             var temp = protocol + "://" + host;
@@ -139,6 +139,13 @@ namespace ConsoleApp.Task
                     urlExternallList.Add(new ExternalUrls { Url = protocol + ":" + href });
             }
             return urlExternallList.ToList();
+        }
+        public string HostFullAdr(string url)
+        {
+            var myUri = new Uri(url);
+            var protocol = myUri.Scheme;
+            var host = myUri.Host;
+            return  protocol + "://" + host;
         }
     }
 }

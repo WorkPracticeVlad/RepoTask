@@ -20,7 +20,7 @@ namespace ConsoleApp
                 //var tb = new SiteTreeBuilder(rep);
                 //tb.WatchFolder("C:\\Users\\vorlov\\Desktop\\BuildTree");
                 var pr = new Crawling(rep);
-                pr.StartCrawl("http://ru.simplesite.com/pages/faq.aspx", 10);
+                pr.StartCrawl("https://learn.javascript.ru/", 20);
             }
         }
     }
