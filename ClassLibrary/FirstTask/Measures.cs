@@ -43,7 +43,7 @@ namespace ClassLibrary.FirstTask
             }
             catch (Exception e)
             {
-                lgr.Error(fullUrl+e.InnerException);
+                lgr.Error(fullUrl+e.Message+e.InnerException);
                 res.Url = fullUrl;
                 return res;
             }
@@ -127,10 +127,19 @@ namespace ClassLibrary.FirstTask
         }
         public string HostFullAdr(string url)
         {
-            var myUri = new Uri(url);
-            var protocol = myUri.Scheme;
-            var host = myUri.Host;
-            return protocol + "://" + host;
+            try
+            {
+                var myUri = new Uri(url);
+                var protocol = myUri.Scheme;
+                var host = myUri.Host;
+                return protocol + "://" + host;
+            }
+            catch (Exception ex)
+            {
+                lgr.Error(url + ex.Message + ex.InnerException);
+                return "Uri ex";
+            }
+            
         }
     }
 }

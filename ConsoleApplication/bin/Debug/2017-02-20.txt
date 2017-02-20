@@ -851,3 +851,591 @@
 2017-02-20 05:21:13.0401|ERROR|ClassLibrary.FirstTask.Measures|https://www.tui.ru/img/d26502f5-bb8b-41fd-8c17-0ed05677f440/Europe/Turkey/Antalya/side/Side-City/Magic-Life-Jacaranda-Side.jpg?geo=1&amp;width=620&amp;height=380
 2017-02-20 05:21:14.9437|ERROR|ClassLibrary.FirstTask.Measures|http://www.paks.ru/ru-RU/Destinations/Regions/%D0%9A%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80/%D0%94%D0%B0%D0%BB%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA
 2017-02-20 05:21:36.7671|ERROR|ClassLibrary.FirstTask.Measures|http://www.paks.ru/ru-RU/Destinations/Regions/%D0%9A%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80/%D0%93%D0%BE%D1%80%D0%BE%D0%B4-%D0%97%D0%B0%D0%B3%D1%80%D0%B5%D0%B1
+2017-02-20 05:28:29.4040|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://en.wikipedia.org/wiki/Pilgrim:_Faith_as_a_Weapon in 20 threads
+2017-02-20 05:29:58.2906|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/en/a/aa/Pilgrim%2C_Faith_as_a_Weapon_cover.jpeg
+2017-02-20 05:29:58.3401|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/en/a/aa/Pilgrim%2C_Faith_as_a_Weapon_cover.jpeg
+2017-02-20 05:29:58.4172|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/en/a/aa/Pilgrim%2C_Faith_as_a_Weapon_cover.jpeg
+2017-02-20 05:30:51.8984|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:51.9501|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:53.1648|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:53.2073|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:54.2756|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:54.2997|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:30:55.6042|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py?page=Pilgrim:_Faith_as_a_Weapon&amp;editintro=Template:Disambiguation_needed/editintro&amp;client=Template:Dn
+2017-02-20 05:31:06.4348|ERROR|ClassLibrary.FirstTask.Measures|http://ew.com/article/1997/07/11/versailles-1685/
+2017-02-20 05:31:11.7652|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:11.7842|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:21.7762|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:21.7852|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:31.7892|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:31.7892|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:41.7977|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:41.7977|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:47.3370|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/29542678
+2017-02-20 05:31:48.9243|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/29542678
+2017-02-20 05:31:51.8270|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:31:51.8350|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:32:01.8462|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:32:01.8462|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:32:05.2118|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:05.3686|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:06.3272|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:06.4984|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:07.5226|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:07.6376|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:08.6028|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:08.8123|ERROR|ClassLibrary.FirstTask.Measures|http://www.samohomsak.com/documents/SamoHomsak_resume.pdf
+2017-02-20 05:32:11.8703|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:32:11.9263|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:32:21.8998|ERROR|ClassLibrary.FirstTask.Measures|http://www.learningvillage.com/html/rcstime.html
+2017-02-20 05:33:17.1959|ERROR|ClassLibrary.FirstTask.Measures|http://meanhamster.comSystem.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 216.9.89.29:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+2017-02-20 05:33:32.9859|ERROR|ClassLibrary.FirstTask.Measures|http://www.businessweek.com/1997/40/b3547133.htm
+2017-02-20 05:33:34.8132|ERROR|ClassLibrary.FirstTask.Measures|http://mesmogames.wetpaint.com/page/Vegas+Nights
+2017-02-20 05:33:42.2302|ERROR|ClassLibrary.FirstTask.Measures|https://download.kiwix.org/bin/kiwix-win.zip
+2017-02-20 05:33:57.8515|ERROR|ClassLibrary.FirstTask.Measures|http://meanhamster.com/System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 216.9.89.29:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+2017-02-20 05:33:58.0657|ERROR|ClassLibrary.FirstTask.Measures|https://www.wired.com/go/failsafeSystem.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 05:34:03.8265|ERROR|ClassLibrary.FirstTask.Measures|http://www.highbeam.com/library/docfree.asp?DOCID=1G1:92681532&amp;ctrlInfo=Round20%3AMode20e%3ADocFree%3AResult&amp;ao=
+2017-02-20 05:34:30.4211|ERROR|ClassLibrary.FirstTask.Measures|https://subscribe.wired.com/subscribe/wired/109426?source=NativeFooterSystem.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 05:35:17.8903|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/62254069
+2017-02-20 05:35:19.1916|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/62254069
+2017-02-20 05:35:19.5444|ERROR|ClassLibrary.FirstTask.Measures|https://www.ncjrs.gov/App/Publications/abstract.aspx?ID=122967System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 05:35:24.7807|ERROR|ClassLibrary.FirstTask.Measures|https://web.archive.org/web/20060224090117/http://5ichc-portugal.ulusofona.pt/uploads/PaperLong-MarcoFontani.doc
+2017-02-20 05:36:07.1635|ERROR|ClassLibrary.FirstTask.Measures|https://tools.wmflabs.org/cluestuff/AmINeededToCounterVandalism?
+2017-02-20 05:36:18.3850|ERROR|ClassLibrary.FirstTask.Measures|https://openaccessbutton.orgSystem.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 05:36:26.2801|ERROR|ClassLibrary.FirstTask.Measures|http://www.1up.com/do/feature?pager.offset=4&amp;cId=3152109
+2017-02-20 05:36:38.1940|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/b/b3/Wikipedia_Library_owl.svg
+2017-02-20 05:36:38.2620|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/72px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:38.3351|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/157px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:38.6188|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/314px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:39.0526|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/393px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:39.2658|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/503px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:39.5430|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/670px-Wikipedia_Library_owl.svg.png
+2017-02-20 05:36:45.2945|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/archive/b/b3/20140403043100%21Wikipedia_Library_owl.svg
+2017-02-20 05:36:45.3476|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/archive/b/b3/20140403043100%21Wikipedia_Library_owl.svg
+2017-02-20 05:36:45.4837|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/archive/b/b3/20140401220429%21Wikipedia_Library_owl.svg
+2017-02-20 05:36:45.5732|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/archive/b/b3/20140401092632%21Wikipedia_Library_owl.svg
+2017-02-20 05:36:45.6238|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/archive/b/b3/20140401220429%21Wikipedia_Library_owl.svg
+2017-02-20 05:37:02.0473|ERROR|ClassLibrary.FirstTask.Measures|http://www2.liu.edu/cwis/cwp/library/workshop/citama.htm
+2017-02-20 05:37:37.2806|ERROR|ClassLibrary.FirstTask.Measures|http://www.ripm.org/pdf/RIPMHelpSearch.pdf
+2017-02-20 05:39:04.8132|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/5/58/EAN-13-ISMN-13.png
+2017-02-20 05:41:14.4034|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/84446000
+2017-02-20 05:41:15.7327|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/84446000
+2017-02-20 05:46:10.4566|ERROR|ClassLibrary.FirstTask.Measures|http://partitasmusic.com/
+2017-02-20 05:46:11.5646|ERROR|ClassLibrary.FirstTask.Measures|http://partitasmusic.com/
+2017-02-20 05:46:35.7213|ERROR|ClassLibrary.FirstTask.Measures|http://www.americanradiohistory.com/Archive-BC/BC-1994/BC-1994-09-19.pdf
+2017-02-20 05:47:46.8722|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2015-02-04%2FGallery&amp;tite=Langston+Hughes
+2017-02-20 05:50:56.2631|ERROR|ClassLibrary.FirstTask.Measures|http://media-shoot.ru/books/Konovalov-Harakteristi4eskaja_krivaja.pdf
+2017-02-20 05:50:56.3982|ERROR|ClassLibrary.FirstTask.Measures|http://media-shoot.ru/books/Konovalov-Harakteristi4eskaja_krivaja.pdf
+2017-02-20 05:50:57.3001|ERROR|ClassLibrary.FirstTask.Measures|http://www.riat-serra.org/g_tech_3.pdf
+2017-02-20 05:50:57.3001|ERROR|ClassLibrary.FirstTask.Measures|http://www.riat-serra.org/g_tech_3.pdf
+2017-02-20 05:50:57.9616|ERROR|ClassLibrary.FirstTask.Measures|http://www.riat-serra.org/g_tech_3.pdf
+2017-02-20 05:50:57.9726|ERROR|ClassLibrary.FirstTask.Measures|http://www.riat-serra.org/g_tech_3.pdf
+2017-02-20 05:50:58.6383|ERROR|ClassLibrary.FirstTask.Measures|http://www.riat-serra.org/g_tech_3.pdf
+2017-02-20 05:51:11.7763|ERROR|ClassLibrary.FirstTask.Measures|http://people.ischool.berkeley.edu/~buckland/kinamo08.pdf
+2017-02-20 05:51:11.7763|ERROR|ClassLibrary.FirstTask.Measures|http://people.ischool.berkeley.edu/~buckland/kinamo08.pdf
+2017-02-20 05:51:12.7550|ERROR|ClassLibrary.FirstTask.Measures|http://people.ischool.berkeley.edu/~buckland/kinamo08.pdf
+2017-02-20 05:51:12.7550|ERROR|ClassLibrary.FirstTask.Measures|http://people.ischool.berkeley.edu/~buckland/kinamo08.pdf
+2017-02-20 05:51:13.8090|ERROR|ClassLibrary.FirstTask.Measures|http://people.ischool.berkeley.edu/~buckland/kinamo08.pdf
+2017-02-20 05:51:20.4313|ERROR|ClassLibrary.FirstTask.Measures|http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=2042665
+2017-02-20 05:51:20.4398|ERROR|ClassLibrary.FirstTask.Measures|http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=2042665
+2017-02-20 05:51:24.6462|ERROR|ClassLibrary.FirstTask.Measures|http://libinfo.uark.edu/aas/issues/1951v4/v4a28.pdf
+2017-02-20 05:51:24.6462|ERROR|ClassLibrary.FirstTask.Measures|http://libinfo.uark.edu/aas/issues/1951v4/v4a28.pdf
+2017-02-20 05:51:25.1176|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/weston_film_ratings_1946.pdf
+2017-02-20 05:51:25.1176|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/weston_film_ratings_1946.pdf
+2017-02-20 05:51:25.5250|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/weston_sangamo_%20ratings.pdf
+2017-02-20 05:51:25.5250|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/weston_sangamo_%20ratings.pdf
+2017-02-20 05:51:25.8683|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/weston_sangamo_%20ratings.pdf
+2017-02-20 05:51:25.9963|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/film_values.pdf
+2017-02-20 05:51:26.2724|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/film_values.pdf
+2017-02-20 05:51:26.3419|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/film_values.pdf
+2017-02-20 05:51:26.6297|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/film_values.pdf
+2017-02-20 05:51:26.9708|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/flashes_meters/film_values.pdf
+2017-02-20 05:51:27.4723|ERROR|ClassLibrary.FirstTask.Measures|http://www.jollinger.com/photo/meters/images/ads/GE/ge_dw58hood%281946%29.jpg
+2017-02-20 05:51:27.5193|ERROR|ClassLibrary.FirstTask.Measures|http://www.jollinger.com/photo/meters/images/ads/GE/ge_dw58hood%281946%29.jpg
+2017-02-20 05:51:28.6937|ERROR|ClassLibrary.FirstTask.Measures|http://www.jollinger.com/photo/meters/images/ads/GE/ge_dw58hood%281946%29.jpg
+2017-02-20 05:51:28.7753|ERROR|ClassLibrary.FirstTask.Measures|http://www.jollinger.com/photo/meters/images/ads/GE/ge_dw58hood%281946%29.jpg
+2017-02-20 05:51:35.7982|ERROR|ClassLibrary.FirstTask.Measures|http://en.leica-camera.com/assets/file/download.php?filename=file_2048.pdf
+2017-02-20 05:51:35.8342|ERROR|ClassLibrary.FirstTask.Measures|http://en.leica-camera.com/assets/file/download.php?filename=file_2048.pdf
+2017-02-20 05:51:40.0082|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-1.pdf
+2017-02-20 05:51:40.1493|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-1.pdf
+2017-02-20 05:51:40.4195|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-2.pdf
+2017-02-20 05:51:40.5056|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-2.pdf
+2017-02-20 05:51:40.7718|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-3.pdf
+2017-02-20 05:51:40.9078|ERROR|ClassLibrary.FirstTask.Measures|http://www.cameramanuals.org/canon_pdf/canon_a1-3.pdf
+2017-02-20 05:51:42.3493|ERROR|ClassLibrary.FirstTask.Measures|http://www.nikonusa.com/Find-Your-Nikon/Product/Digital-SLR/25466/D3S.html
+2017-02-20 05:51:42.4189|ERROR|ClassLibrary.FirstTask.Measures|http://www.nikonusa.com/Find-Your-Nikon/Product/Digital-SLR/25466/D3S.html
+2017-02-20 05:51:43.2012|ERROR|ClassLibrary.FirstTask.Measures|http://www.nikonusa.com/Find-Your-Nikon/Product/Digital-SLR/25466/D3S.html
+2017-02-20 05:51:43.3709|ERROR|ClassLibrary.FirstTask.Measures|http://www.nikonusa.com/Find-Your-Nikon/Product/Digital-SLR/25466/D3S.html
+2017-02-20 05:51:44.5521|ERROR|ClassLibrary.FirstTask.Measures|http://www.usa.canon.com/cusa/consumer/products/cameras/slr_cameras/eos_1d_x
+2017-02-20 05:51:44.8699|ERROR|ClassLibrary.FirstTask.Measures|http://www.usa.canon.com/cusa/consumer/products/cameras/slr_cameras/eos_1d_x
+2017-02-20 05:51:46.1429|ERROR|ClassLibrary.FirstTask.Measures|http://www.usa.canon.com/cusa/consumer/products/cameras/slr_cameras/eos_1d_x
+2017-02-20 05:51:46.9373|ERROR|ClassLibrary.FirstTask.Measures|http://www.usa.canon.com/cusa/consumer/products/cameras/slr_cameras/eos_1d_x
+2017-02-20 05:51:50.5826|ERROR|ClassLibrary.FirstTask.Measures|http://www.jollinger.com/photo/meters/images/ads/GE/ge_dw58hood%281946%29.jpg
+2017-02-20 05:52:02.7726|ERROR|ClassLibrary.FirstTask.Measures|http://www.ilfordphoto.com/Webfiles/200613019405339.pdf
+2017-02-20 05:52:02.8276|ERROR|ClassLibrary.FirstTask.Measures|http://www.ilfordphoto.com/Webfiles/200613019405339.pdf
+2017-02-20 05:52:03.0228|ERROR|ClassLibrary.FirstTask.Measures|http://www.ilfordphoto.com/Webfiles/200613019405339.pdf
+2017-02-20 05:52:03.0478|ERROR|ClassLibrary.FirstTask.Measures|http://www.ilfordphoto.com/Webfiles/200613019405339.pdf
+2017-02-20 05:52:03.2909|ERROR|ClassLibrary.FirstTask.Measures|http://www.ilfordphoto.com/Webfiles/200613019405339.pdf
+2017-02-20 05:52:04.6561|ERROR|ClassLibrary.FirstTask.Measures|http://www.cipa.jp/std/documents/e/DC-008-2010_E.pdf
+2017-02-20 05:52:04.8252|ERROR|ClassLibrary.FirstTask.Measures|http://www.cipa.jp/std/documents/e/DC-008-2010_E.pdf
+2017-02-20 05:52:05.1875|ERROR|ClassLibrary.FirstTask.Measures|http://dougkerr.net/Pumpkin/articles/SOS_REI.pdf
+2017-02-20 05:52:05.1875|ERROR|ClassLibrary.FirstTask.Measures|http://dougkerr.net/Pumpkin/articles/SOS_REI.pdf
+2017-02-20 05:52:05.3487|ERROR|ClassLibrary.FirstTask.Measures|http://www.cipa.jp/std/documents/e/DC-008-2010_E.pdf
+2017-02-20 05:52:05.4127|ERROR|ClassLibrary.FirstTask.Measures|http://www.cipa.jp/std/documents/e/DC-008-2010_E.pdf
+2017-02-20 05:52:05.6194|ERROR|ClassLibrary.FirstTask.Measures|http://cdn-10.nikon-cdn.com/pdf/manuals/dslr/D200_en.pdf
+2017-02-20 05:52:05.6194|ERROR|ClassLibrary.FirstTask.Measures|http://cdn-10.nikon-cdn.com/pdf/manuals/dslr/D200_en.pdf
+2017-02-20 05:52:05.9114|ERROR|ClassLibrary.FirstTask.Measures|http://cdn-10.nikon-cdn.com/pdf/manuals/dslr/D200_en.pdf
+2017-02-20 05:52:05.9114|ERROR|ClassLibrary.FirstTask.Measures|http://cdn-10.nikon-cdn.com/pdf/manuals/dslr/D200_en.pdf
+2017-02-20 05:52:06.2787|ERROR|ClassLibrary.FirstTask.Measures|http://www.cipa.jp/std/documents/e/DC-008-2010_E.pdf
+2017-02-20 05:53:42.3476|ERROR|ClassLibrary.FirstTask.Measures|http://www.manuscriptsapp.com/
+2017-02-20 05:53:42.5345|ERROR|ClassLibrary.FirstTask.Measures|http://pira.isrl.uiuc.edu/
+2017-02-20 05:53:59.4689|ERROR|ClassLibrary.FirstTask.Measures|https://help.wizfolio.com/Contents/WizCite.aspxSystem.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 203.211.150.254:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+2017-02-20 05:54:20.3112|ERROR|ClassLibrary.FirstTask.Measures|http://www.citavi.com/lyx
+2017-02-20 05:55:09.5636|ERROR|ClassLibrary.FirstTask.Measures|https://mediatum.ub.tum.de/doc/1320978/1320978.pdf
+2017-02-20 05:55:12.2825|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2015-07-29%2FIn_the_media&amp;tite=Is+Wikipedia+a+battleground+in+the+culture+wars%3F
+2017-02-20 05:55:17.8167|ERROR|ClassLibrary.FirstTask.Measures|http://stakeholders.ofcom.org.uk/binaries/enforcement/broadcast-bulletins/obb284/Issue_284.pdf
+2017-02-20 05:55:17.8432|ERROR|ClassLibrary.FirstTask.Measures|http://stakeholders.ofcom.org.uk/binaries/enforcement/broadcast-bulletins/obb284/Issue_284.pdf
+2017-02-20 05:55:23.7596|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Eager_(band)System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+2017-02-20 05:56:01.7197|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2015-07-08%2FTechnology_report&amp;tite=Tech+news+in+brief
+2017-02-20 05:56:11.3601|ERROR|ClassLibrary.FirstTask.Measures|http://paratge.wordpress.com/2013/05/05/heretiquespyrenees/
+2017-02-20 05:56:45.8929|ERROR|ClassLibrary.FirstTask.Measures|http://webster.commnet.edu/mla/index.shtml
+2017-02-20 05:58:01.2245|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/143508753
+2017-02-20 05:58:01.6478|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/143508753
+2017-02-20 05:58:02.5569|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/143508753
+2017-02-20 05:58:02.5669|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/143508753
+2017-02-20 05:58:15.3143|ERROR|ClassLibrary.FirstTask.Measures|http://diberri.crabdance.com/cgi-bin/templatefiller/
+2017-02-20 05:59:13.3759|ERROR|ClassLibrary.FirstTask.Measures|http://apps.who.int/iris/bitstream/10665/93142/1/EML_18_eng.pdf?ua=1
+2017-02-20 05:59:27.2448|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/Vocational_rehabilitation
+2017-02-20 05:59:28.0740|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/Vocational_rehabilitation
+2017-02-20 05:59:58.4321|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/17226919
+2017-02-20 05:59:58.6178|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/17226919
+2017-02-20 05:59:59.8690|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/17226919
+2017-02-20 05:59:59.9085|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/17226919
+2017-02-20 05:59:59.9085|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/17226919
+2017-02-20 06:00:00.0426|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/17226919
+2017-02-20 06:00:01.0354|ERROR|ClassLibrary.FirstTask.Measures|https://www.worldcat.org/identities/containsVIAFID/17226919
+2017-02-20 06:00:01.2656|ERROR|ClassLibrary.FirstTask.Measures|https://viaf.org/viaf/17226919
+2017-02-20 06:02:46.9295|ERROR|ClassLibrary.FirstTask.Measures|http://www.edalat.co.uk/articles/1993-09-20-the-Times.pdf
+2017-02-20 06:02:49.5687|ERROR|ClassLibrary.FirstTask.Measures|http://www.am-hosts.com/articles/Financial_News_MFlorman0200.pdf
+2017-02-20 06:02:50.2743|ERROR|ClassLibrary.FirstTask.Measures|http://www.malmaeus.com/references/1999-06-20-SundayBusiness.pdf
+2017-02-20 06:02:50.4170|ERROR|ClassLibrary.FirstTask.Measures|http://www.malmaeus.com/references/1998-08-01-AcquisitionsMonthly.pdf
+2017-02-20 06:02:51.0065|ERROR|ClassLibrary.FirstTask.Measures|http://www.malmaeus.com/references/1999-12-01-Acquisitions-Monthly.pdf
+2017-02-20 06:02:51.3488|ERROR|ClassLibrary.FirstTask.Measures|http://www.edalat.co.uk/articles/1999-07-04-SundayBusiness.pdf
+2017-02-20 06:02:53.2906|ERROR|ClassLibrary.FirstTask.Measures|http://www.acm-consult.com/our-services/acm-insight/acm-insight-magazine-editions/
+2017-02-20 06:03:13.0064|ERROR|ClassLibrary.FirstTask.Measures|http://www.markflorman.com/wp-content/uploads/2017/01/PEI-152_RI2017_LastWord_40.pdf
+2017-02-20 06:03:16.1460|ERROR|ClassLibrary.FirstTask.Measures|http://www.africaniptrust.org
+2017-02-20 06:03:20.0748|ERROR|ClassLibrary.FirstTask.Measures|http://www.edalat.co.uk/articles/2009-07-04-FT-ThisIsAfrica.pdf
+2017-02-20 06:03:23.2154|ERROR|ClassLibrary.FirstTask.Measures|http://www.scc.org.uk/index.php?page=14&amp;l=1/
+2017-02-20 06:03:25.6397|ERROR|ClassLibrary.FirstTask.Measures|http://www.nytco.com/wp-content/uploads/NYT_Ethical_Journalism_0904-1.pdf
+2017-02-20 06:04:26.9161|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karuah_RiverSystem.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+2017-02-20 06:04:39.9364|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2015-11-04%2FIn_the_media&amp;tite=Ahmadiyya+Jabrayilov%3A+propaganda+myth+or+history%3F
+2017-02-20 06:04:43.6189|ERROR|ClassLibrary.FirstTask.Measures|http://qz.com/538824/wikipedia-now-has-five-million-articles-but-they-cover-just-a-tiny-sliver-of-all-human-knowledge/
+2017-02-20 06:04:44.3003|ERROR|ClassLibrary.FirstTask.Measures|http://qz.com/543216/beyond-the-pyramids-twitter-users-create-a-ben-carson-wikipedia/
+2017-02-20 06:06:11.1712|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2015-09-16%2FTechnology_report&amp;tite=Tech+news+in+brief
+2017-02-20 06:06:26.9290|ERROR|ClassLibrary.FirstTask.Measures|https://cxupdate.wordpress.com/2015/09/11/september-11-cx-update-fixes-in-broken-publishing-in-some-languages/
+2017-02-20 06:06:34.7449|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2016-04-01%2FNews_and_notes&amp;tite=Trump%2FWales+2016
+2017-02-20 06:06:45.7734|ERROR|ClassLibrary.FirstTask.Measures|http://mail.wikimedia.org/pipermail/wikien-l/2006-May/046732.html
+2017-02-20 06:07:02.8807|ERROR|ClassLibrary.FirstTask.Measures|http://variety.com/2005/digital/news/helmers-hear-a-who-1117934157/
+2017-02-20 06:07:03.2325|ERROR|ClassLibrary.FirstTask.Measures|http://variety.com/2005/digital/news/fox-woos-seuss-with-new-who-1117919175/
+2017-02-20 06:07:22.5605|ERROR|ClassLibrary.FirstTask.Measures|http://www.mymovies.it/filmclub/2007/09/178/mymovies.pdf
+2017-02-20 06:07:38.0517|ERROR|ClassLibrary.FirstTask.Measures|http://variety.com/2008/digital/awards/kung-fu-panda-leads-annie-noms-1117996615/
+2017-02-20 06:07:49.8433|ERROR|ClassLibrary.FirstTask.Measures|http://www.goldentrailer.com/gta9.html
+2017-02-20 06:08:03.1937|ERROR|ClassLibrary.FirstTask.Measures|http://variety.com/2008/film/awards/satellites-soar-for-meryl-streep-1117996606/
+2017-02-20 06:09:58.3537|ERROR|ClassLibrary.FirstTask.Measures|http://mail.wikimedia.org/pipermail/wikien-l/2006-May/046440.html
+2017-02-20 06:11:30.4933|ERROR|ClassLibrary.FirstTask.Measures|http://www.newcastle.edu.au/__data/assets/pdf_file/0012/107211/Introduction-and-our-organisation-2013-UON-AR.pdf
+2017-02-20 06:11:30.4933|ERROR|ClassLibrary.FirstTask.Measures|http://www.newcastle.edu.au/__data/assets/pdf_file/0012/107211/Introduction-and-our-organisation-2013-UON-AR.pdf
+2017-02-20 06:11:51.5857|ERROR|ClassLibrary.FirstTask.Measures|http://archivesoutside.records.nsw.gov.au/grant-of-arms-the-university-of-newcastles-declaration-of-independenceSystem.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 06:11:51.6428|ERROR|ClassLibrary.FirstTask.Measures|http://archivesoutside.records.nsw.gov.au/grant-of-arms-the-university-of-newcastles-declaration-of-independenceSystem.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 06:12:46.0182|ERROR|ClassLibrary.FirstTask.Measures|http://www.newcastle.edu.au/__data/assets/pdf_file/0009/41868/Research-document_John-Maynard_whose-land.pdf
+2017-02-20 06:12:46.2034|ERROR|ClassLibrary.FirstTask.Measures|http://www.newcastle.edu.au/__data/assets/pdf_file/0009/41868/Research-document_John-Maynard_whose-land.pdf
+2017-02-20 06:13:24.1084|ERROR|ClassLibrary.FirstTask.Measures|https://delicious.com/save?v=5&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWikipedia%3AWikipedia_Signpost%2F2016-07-04%2FTraffic_report&amp;tite=Goalposts%3B+Oy+vexit
+2017-02-20 06:13:52.9806|ERROR|ClassLibrary.FirstTask.Measures|http://blog.apastyle.org/files/doi-and-url-flowchart-8.pdf
+2017-02-20 06:13:53.8457|ERROR|ClassLibrary.FirstTask.Measures|http://cshbenchmarks.wordpress.com/2009/02/23/why-article-tagging-doesnt-work/
+2017-02-20 06:13:59.7320|ERROR|ClassLibrary.FirstTask.Measures|https://web.archive.org/web/20070928095310/http://www.melbourneinstitute.com/publications/reports/dr_aus_uni/Paper_Rating.pdf
+2017-02-20 06:14:02.6064|ERROR|ClassLibrary.FirstTask.Measures|https://web.archive.org/web/20070928095310/http://www.melbourneinstitute.com/publications/reports/dr_aus_uni/Paper_Rating.pdf
+2017-02-20 06:14:25.8087|ERROR|ClassLibrary.FirstTask.Measures|http://uonservices.org.au/lowdown/yak-media
+2017-02-20 06:14:25.8087|ERROR|ClassLibrary.FirstTask.Measures|http://uonservices.org.au/lowdown/yak-media
+2017-02-20 06:14:36.3834|ERROR|ClassLibrary.FirstTask.Measures|http://archivesoutside.records.nsw.gov.au/regional-repositories/university-of-newcastle-library/System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 06:14:36.4870|ERROR|ClassLibrary.FirstTask.Measures|http://archivesoutside.records.nsw.gov.au/regional-repositories/university-of-newcastle-library/System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.TlsStream.CallProcessAuthentication(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.ConnectStream.WriteHeaders(Boolean async)
+2017-02-20 06:16:19.9529|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/Herman_Daly
+2017-02-20 06:16:20.1841|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/Herman_Daly
+2017-02-20 06:16:20.5554|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/Herman_Daly
+2017-02-20 06:16:20.7415|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/Herman_Daly
+2017-02-20 06:16:20.8006|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/Herman_Daly
+2017-02-20 06:16:22.7251|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/De-extinction
+2017-02-20 06:16:22.7251|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/De-extinction
+2017-02-20 06:16:23.2510|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dablinks.py/De-extinction
+2017-02-20 06:16:27.3662|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/De-extinction
+2017-02-20 06:16:27.8060|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/De-extinction
+2017-02-20 06:16:30.2627|ERROR|ClassLibrary.FirstTask.Measures|http://dispenser.homenet.org/~dispenser/cgi-bin/dab_solver.py/De-extinction
+2017-02-20 06:17:41.5197|ERROR|ClassLibrary.FirstTask.Measures|https://blog.wikimedia.org/2016/07/01/europeana-challenge-finish/
+2017-02-20 06:17:43.5982|ERROR|ClassLibrary.FirstTask.Measures|https://blog.wikimedia.org/2016/07/01/europeana-challenge-finish/
+2017-02-20 06:17:44.1545|ERROR|ClassLibrary.FirstTask.Measures|https://blog.wikimedia.org/2016/07/01/europeana-challenge-finish/
+2017-02-20 06:17:45.9369|ERROR|ClassLibrary.FirstTask.Measures|https://www.llgc.org.uk/blog/?p=11702
+2017-02-20 06:17:47.9462|ERROR|ClassLibrary.FirstTask.Measures|https://www.llgc.org.uk/blog/?p=11702
+2017-02-20 06:17:47.9653|ERROR|ClassLibrary.FirstTask.Measures|https://www.llgc.org.uk/blog/?p=11702
+2017-02-20 06:17:55.8804|ERROR|ClassLibrary.FirstTask.Measures|https://www.pseshsf.org/fr/programme/2016/#event-541
+2017-02-20 06:17:55.9034|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/UK_SportSystem.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+2017-02-20 06:18:15.5761|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Avicenna
+2017-02-20 06:18:18.7236|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Avicenna
+2017-02-20 06:18:17.1258|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Special:BookSources/978-0664502485
+2017-02-20 06:18:55.1879|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Navayana
+2017-02-20 06:18:58.3810|ERROR|ClassLibrary.FirstTask.Measures|https://meta.wikimedia.org/wiki/100wikidays
+2017-02-20 06:19:00.0164|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Maimonides
+2017-02-20 06:19:06.9352|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Bible
+2017-02-20 06:19:13.3180|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Wikipedia:Cherrypicking
+2017-02-20 06:19:32.2360|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/The_Comeback_(TV_series)
+2017-02-20 06:19:26.9909|ERROR|ClassLibrary.FirstTask.Measures|https://meta.wikimedia.org/wiki/100wikidays
+2017-02-20 06:19:35.6931|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Template:Jews_and_Judaism
+2017-02-20 06:19:21.7502|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Jainism
+2017-02-20 06:19:27.0039|ERROR|ClassLibrary.FirstTask.Measures|https://meta.wikimedia.org/wiki/100wikidays
+2017-02-20 06:19:32.2245|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/User_talk:TMg/currentDate.js
+2017-02-20 06:19:20.0909|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Augustin_Calmet
+2017-02-20 06:19:35.6831|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Scrolling_shooter
+2017-02-20 06:19:51.6099|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Bon
+2017-02-20 06:20:07.4936|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Pastoral_epistles
+2017-02-20 06:20:07.4936|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/VisitEngland
+2017-02-20 06:20:07.4936|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Averroes
+2017-02-20 06:20:07.5675|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Averroes
+2017-02-20 06:20:07.5565|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Calvinism&amp;action=edit&amp;section=35
+2017-02-20 06:20:07.5565|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Averroes
+2017-02-20 06:20:07.5675|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=East%E2%80%93West_Schism&amp;action=edit&amp;section=44
+2017-02-20 06:20:23.0611|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Hasmonean_dynasty
+2017-02-20 06:20:24.6939|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Baron_d%27Holbach
+2017-02-20 06:20:27.9749|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Baron_d%27Holbach
+2017-02-20 06:20:29.5432|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Yazidis
+2017-02-20 06:20:31.3534|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ishikism
+2017-02-20 06:20:58.7379|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ali-Illahism
+2017-02-20 06:21:07.0672|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Government-owned_corporation
+2017-02-20 06:21:07.1092|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Herod_the_Great
+2017-02-20 06:21:29.6266|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard
+2017-02-20 06:21:49.3015|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Baron_d%27Holbach
+2017-02-20 06:21:58.0820|ERROR|ClassLibrary.FirstTask.Measures|http://wigi.wmflabs.org/monitoring-gender-gap.pdf
+2017-02-20 06:21:58.0820|ERROR|ClassLibrary.FirstTask.Measures|http://wigi.wmflabs.org/monitoring-gender-gap.pdf
+2017-02-20 06:21:58.2867|ERROR|ClassLibrary.FirstTask.Measures|http://www.evazangerle.at/wp-content/papercite-data/pdf/opensym16.pdf
+2017-02-20 06:21:58.3036|ERROR|ClassLibrary.FirstTask.Measures|http://www.evazangerle.at/wp-content/papercite-data/pdf/opensym16.pdf
+2017-02-20 06:21:58.3752|ERROR|ClassLibrary.FirstTask.Measures|http://wigi.wmflabs.org/monitoring-gender-gap.pdf
+2017-02-20 06:22:06.2029|ERROR|ClassLibrary.FirstTask.Measures|https://blog.wikimedia.org/2016/07/01/project-grants/
+2017-02-20 06:22:06.2149|ERROR|ClassLibrary.FirstTask.Measures|https://blog.wikimedia.org/2016/07/01/project-grants/
+2017-02-20 06:22:06.3958|ERROR|ClassLibrary.FirstTask.Measures|https://iccl.inf.tu-dresden.de/web/Stellenausschreibung4/en
+2017-02-20 06:22:06.4158|ERROR|ClassLibrary.FirstTask.Measures|https://iccl.inf.tu-dresden.de/web/Stellenausschreibung4/en
+2017-02-20 06:22:09.5635|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Baron_d%27Holbach
+2017-02-20 06:22:21.5821|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Wikipedia%3ANo+original+research
+2017-02-20 06:22:21.5821|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Herod_the_Great
+2017-02-20 06:22:21.5821|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Mark_the_Evangelist
+2017-02-20 06:22:21.5821|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Fox_Life_(Netherlands)&amp;action=edit&amp;section=3
+2017-02-20 06:22:46.6672|ERROR|ClassLibrary.FirstTask.Measures|https://darkoneko.wordpress.com/2016/07/25/jouons-avec-wikidata-localites-au-fil-de-leau/
+2017-02-20 06:22:52.8882|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:Project_chat#Olympic_Games
+2017-02-20 06:22:56.9367|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Department_for_Culture,_Media_and_Sport#Ministers
+2017-02-20 06:23:00.1976|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Caucasian_neopaganism
+2017-02-20 06:23:03.4008|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&amp;returnto=Alltynex
+2017-02-20 06:23:09.7522|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard
+2017-02-20 06:23:11.2513|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Essenes
+2017-02-20 06:23:11.2513|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karl_Marx
+2017-02-20 06:23:13.2160|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Celtic_neopaganism
+2017-02-20 06:23:13.2190|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Celtic_neopaganism
+2017-02-20 06:23:13.2160|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Essenes
+2017-02-20 06:23:13.2455|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=East%E2%80%93West_Schism&amp;action=edit&amp;section=46
+2017-02-20 06:23:17.5584|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/0/07/Infographic_on_the_flow_of_Wikidata_%28for_offWiki_usage%29.svg
+2017-02-20 06:23:17.6870|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/0/07/Infographic_on_the_flow_of_Wikidata_%28for_offWiki_usage%29.svg
+2017-02-20 06:23:18.2600|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/e/ec/Infographic_on_the_flow_of_Wikidata_%28for_onWiki_usage%29.svg
+2017-02-20 06:23:18.2710|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/e/ec/Infographic_on_the_flow_of_Wikidata_%28for_onWiki_usage%29.svg
+2017-02-20 06:23:18.5933|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/e/ec/Infographic_on_the_flow_of_Wikidata_%28for_onWiki_usage%29.svg
+2017-02-20 06:23:24.2897|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:Project_chat#Notability_of_items_for_templates
+2017-02-20 06:23:29.3229|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Nuvola_apps_package_graphics.svg
+2017-02-20 06:23:29.3709|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karl_Marx
+2017-02-20 06:23:49.5948|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karl_Marx
+2017-02-20 06:24:01.9952|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Wikipedia%3ANo+original+research
+2017-02-20 06:24:02.0102|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Fox-Life.png
+2017-02-20 06:24:01.9952|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Primate_(bishop)
+2017-02-20 06:24:02.0102|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Essenes
+2017-02-20 06:24:19.5156|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:WikiProject_Ancient_Rome/lists/people
+2017-02-20 06:24:24.5347|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:Database_reports/age_limits
+2017-02-20 06:24:26.1008|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:WikiProject_Ancient_Rome/lists/people
+2017-02-20 06:24:30.9637|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:WikiProject_Ancient_Rome/lists/people
+2017-02-20 06:24:36.9958|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Secretary_of_State_for_Culture,_Media_and_Sport
+2017-02-20 06:24:40.2516|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Celtic_neopaganism
+2017-02-20 06:24:43.4229|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Alltynex
+2017-02-20 06:24:49.7824|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karl_Marx
+2017-02-20 06:24:51.2832|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/First_Jewish%E2%80%93Roman_War
+2017-02-20 06:24:51.2832|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Albrecht_Ritschl
+2017-02-20 06:24:53.2879|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/First_Jewish%E2%80%93Roman_War
+2017-02-20 06:24:53.2879|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Neo-Druidism
+2017-02-20 06:24:53.2970|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Neo-Druidism
+2017-02-20 06:24:53.2879|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Virgin_Mary
+2017-02-20 06:24:59.6164|ERROR|ClassLibrary.FirstTask.Measures|https://docs.google.com/presentation/d/1li_ht2iuETM_31fUUtLguOLY81huSHFbRcoS9_VNpRE/edit#slide=id.p4
+2017-02-20 06:25:02.7605|ERROR|ClassLibrary.FirstTask.Measures|https://docs.google.com/presentation/d/1li_ht2iuETM_31fUUtLguOLY81huSHFbRcoS9_VNpRE/edit#slide=id.p4
+2017-02-20 06:25:12.3533|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Gnome-globe.svg
+2017-02-20 06:25:12.3663|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Albrecht_Ritschl
+2017-02-20 06:25:12.6085|ERROR|ClassLibrary.FirstTask.Measures|http://aidanhogan.com/docs/wikidata-sparql-relational-graph.pdf
+2017-02-20 06:25:13.2790|ERROR|ClassLibrary.FirstTask.Measures|http://www.aclweb.org/anthology/P/P16/P16-1145.pdf
+2017-02-20 06:25:13.2920|ERROR|ClassLibrary.FirstTask.Measures|http://www.aclweb.org/anthology/P/P16/P16-1145.pdf
+2017-02-20 06:25:30.5767|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:Database_reports/items_without_claims_categories/jawiki
+2017-02-20 06:25:30.5807|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Albrecht_Ritschl
+2017-02-20 06:25:34.2441|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/wiki/Wikidata:Database_reports/items_without_claims_categories/jawiki
+2017-02-20 06:25:42.0825|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Wikipedia_talk:No_original_research
+2017-02-20 06:25:45.2997|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Fox_life_fr.png
+2017-02-20 06:25:45.3407|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/First_Jewish%E2%80%93Roman_War
+2017-02-20 06:25:45.3497|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Archbishop
+2017-02-20 06:26:17.4682|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Karen_Bradley
+2017-02-20 06:26:21.9732|ERROR|ClassLibrary.FirstTask.Measures|https://www.wikidata.org/w/index.php?title=Wikidata:Project_chat&amp;diff=361985520&amp;oldid=361985450
+2017-02-20 06:26:23.5612|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Neo-Druidism
+2017-02-20 06:26:23.5692|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Alltynex&amp;action=history
+2017-02-20 06:26:29.8135|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Albrecht_Ritschl
+2017-02-20 06:26:31.3050|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ernst_Haeckel
+2017-02-20 06:26:31.3050|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Bar_Kokhba_revolt
+2017-02-20 06:26:33.8371|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Heathenry_(new_religious_movement)
+2017-02-20 06:26:33.8471|ERROR|ClassLibrary.FirstTask.Measures|https://docs.google.com/presentation/d/1li_ht2iuETM_31fUUtLguOLY81huSHFbRcoS9_VNpRE/edit#slide=id.p4
+2017-02-20 06:26:33.8471|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Bar_Kokhba_revolt
+2017-02-20 06:26:33.8471|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Pius_IX
+2017-02-20 06:26:33.8471|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Heathenry_(new_religious_movement)
+2017-02-20 06:26:46.9715|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Cancel crawling
+2017-02-20 06:26:46.9715|TRACE|ClassLibrary.FirstTask.Crawling|Finish
+2017-02-20 06:26:52.3853|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Nuvola_apps_kuser.svg
+2017-02-20 06:26:52.7272|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ernst_Haeckel
+2017-02-20 06:27:12.1000|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ernst_Haeckel
+2017-02-20 06:27:22.1005|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Wikipedia:No_original_research&amp;action=edit
+2017-02-20 06:27:25.3184|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/File:Foxlife_logo.jpg
+2017-02-20 06:27:25.7095|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Bar_Kokhba_revolt
+2017-02-20 06:27:25.7095|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Alexandria
+2017-02-20 06:27:34.4398|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://es.wikipedia.org/wiki/Maria_Goeppert-Mayer in 16 threads
+2017-02-20 06:27:59.2238|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Katowice
+2017-02-20 06:28:13.8630|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Jewish_diaspora
+2017-02-20 06:28:15.4738|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Jewish_diaspora
+2017-02-20 06:28:12.1739|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Special:WhatLinksHere/Alltynex
+2017-02-20 06:28:15.4848|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Hellenism_(religion)
+2017-02-20 06:28:15.4848|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=East%E2%80%93West_Schism&amp;action=edit&amp;section=47
+2017-02-20 06:28:08.9156|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Heathenry_(new_religious_movement)
+2017-02-20 06:28:13.8630|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Ernst_Haeckel
+2017-02-20 06:28:13.8630|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/William_Kingdon_Clifford
+2017-02-20 06:28:00.8148|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Minister_of_State
+2017-02-20 06:28:15.4738|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Hellenism_(religion)
+2017-02-20 06:28:20.2551|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Katowice
+2017-02-20 06:28:15.4848|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Katowice
+2017-02-20 06:28:13.8550|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Katowice
+2017-02-20 06:28:13.8550|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Katowice
+2017-02-20 06:28:21.8653|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:28:36.4398|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:28:43.0425|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/San_Diego,_California
+2017-02-20 06:28:44.7853|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:28:44.7743|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/San_Diego,_California
+2017-02-20 06:29:08.9558|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:29:08.9558|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Alltynex
+2017-02-20 06:29:10.5670|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Jews_in_the_Middle_Ages
+2017-02-20 06:29:17.0412|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Friedrich_Nietzsche
+2017-02-20 06:29:28.2399|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Matthew_Hancock
+2017-02-20 06:29:33.1391|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/History_of_the_Jews_under_Muslim_rule
+2017-02-20 06:29:34.7878|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=Alltynex&amp;id=719027447
+2017-02-20 06:29:36.4121|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Harald_H%C3%B8ffding
+2017-02-20 06:29:41.4826|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:29:41.4876|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/w/index.php?title=East%E2%80%93West_Schism&amp;action=edit&amp;section=48
+2017-02-20 06:29:43.1128|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:29:43.1128|ERROR|ClassLibrary.FirstTask.Measures|https://es.wikipedia.org/wiki/Imperio_Alem%C3%A1n
+2017-02-20 06:29:56.3084|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Template:Media_in_the_United_Kingdom
+2017-02-20 06:30:05.9266|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Mari_native_religion
+2017-02-20 06:30:07.5520|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/Lev_Shestov
+2017-02-20 06:30:09.1873|ERROR|ClassLibrary.FirstTask.Measures|https://en.wikipedia.org/wiki/The_HolocaustSystem.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Net.Security.SecureChannel.Decrypt(Byte[] payload, Int32& offset, Int32& count)
+   at System.Net.Security._SslStream.ProcessFrameBody(Int32 readBytes, Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartFrameBody(Int32 readBytes, Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+2017-02-20 06:46:05.7704|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://es.wikipedia.org/wiki/Maria_Goeppert-Mayer in 15 threads
+2017-02-20 06:46:18.1918|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Cancel crawling
+2017-02-20 06:46:18.1918|TRACE|ClassLibrary.FirstTask.Crawling|Finish
+2017-02-20 06:46:20.4549|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/3/32/Nobel_prize_medal.svg
+2017-02-20 06:46:20.6784|ERROR|ClassLibrary.FirstTask.Measures|https://upload.wikimedia.org/wikipedia/commons/2/22/Maria_Goeppert-Mayer.jpg
+2017-02-20 06:46:50.4855|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://es.wikipedia.org/wiki/Tiroteo_de_Lima_de_2017 in 17 threads
+2017-02-20 06:48:53.9993|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl http://computer.howstuffworks.com/internet/basics/question180.htm in 17 threads
+2017-02-20 06:49:40.7075|ERROR|ClassLibrary.FirstTask.Measures|http:///www.gettyimages.com
+2017-02-20 06:57:26.0048|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl http://computer.howstuffworks.com/internet/basics/question180.htm in 18 threads
+2017-02-20 06:57:43.8898|ERROR|ClassLibrary.FirstTask.Measures|http:///www.gettyimages.comInvalid URI: The hostname could not be parsed.
+2017-02-20 06:57:58.5638|ERROR|ClassLibrary.FirstTask.Measures|http:///www.gettyimages.comInvalid URI: The hostname could not be parsed.
+2017-02-20 07:00:56.3616|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl http://computer.howstuffworks.com/internet/basics/question180.htm in 19 threads
+2017-02-20 07:01:14.8238|ERROR|ClassLibrary.FirstTask.Measures|http:///www.gettyimages.comInvalid URI: The hostname could not be parsed.
+2017-02-20 07:02:10.6120|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.brainstuffshow.com/brainstuff/2017-01-30-brainstuff-how-long-walk-world.mp3?awCollectionId=1009&awEpisodeId=923190Object reference not set to an instance of an object.
+2017-02-20 07:02:37.0347|ERROR|ClassLibrary.FirstTask.Measures|http://www.networkadvertising.org/sites/default/files/NAI_BeyondCookies_NL.pdfObject reference not set to an instance of an object.
+2017-02-20 07:02:37.0473|ERROR|ClassLibrary.FirstTask.Measures|http://www.networkadvertising.org/sites/default/files/NAI_BeyondCookies_NL.pdfObject reference not set to an instance of an object.
+2017-02-20 07:02:39.5345|ERROR|ClassLibrary.FirstTask.Measures|https://www.facebook.com/allactivity?privacy_source=activity_log_top_menuThe request was aborted: The connection was closed unexpectedly.
+2017-02-20 07:02:41.4586|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.stuffyoushouldknow.com/sysk/2017-02-09-sysk-sketchfest-live-malls-final.mp3?awCollectionId=1003&awEpisodeId=923207Object reference not set to an instance of an object.
+2017-02-20 07:02:48.4239|ERROR|ClassLibrary.FirstTask.Measures|http://encarta.msn.comThe underlying connection was closed: An unexpected error occurred on a receive.System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Connection.SyncRead(HttpWebRequest request, Boolean userRetrievedStream, Boolean probeRead)
+2017-02-20 07:02:49.5667|ERROR|ClassLibrary.FirstTask.Measures|http://sunsite.auc.dk/RFC/The remote name could not be resolved: 'sunsite.auc.dk'
+2017-02-20 07:02:53.1617|ERROR|ClassLibrary.FirstTask.Measures|http://www.cis.ohio-state.edu/htbin/rfc/rfc1340.htmlThe remote name could not be resolved: 'www.cis.ohio-state.edu'
+2017-02-20 07:02:58.3370|ERROR|ClassLibrary.FirstTask.Measures|http://www.howstuffworks.com/podcasts/stuff-you-missed-in-history-class.rssObject reference not set to an instance of an object.
+2017-02-20 07:02:58.3490|ERROR|ClassLibrary.FirstTask.Measures|http://www.howstuffworks.com/podcasts/stuff-you-missed-in-history-class.rssObject reference not set to an instance of an object.
+2017-02-20 07:02:58.4935|ERROR|ClassLibrary.FirstTask.Measures|https://tr-tr.facebook.com/allactivity?privacy_source=activity_log_top_menuThe request was aborted: The connection was closed unexpectedly.
+2017-02-20 07:03:14.8029|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.brainstuffshow.com/brainstuff/2017-01-18-brainstuff-gdp.mp3?awCollectionId=1009&awEpisodeId=923107Object reference not set to an instance of an object.
+2017-02-20 07:03:14.8199|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.brainstuffshow.com/brainstuff/2017-01-18-brainstuff-gdp.mp3?awCollectionId=1009&awEpisodeId=923107Object reference not set to an instance of an object.
+2017-02-20 07:03:15.3098|ERROR|ClassLibrary.FirstTask.Measures|http://www.ticketmaster.ie/stuff-you-should-know-live-dublin-08-04-2016/event/180050C9D2826785?artistid=2077257&majorcatid=10001&minorcatid=52The request was aborted: The connection was closed unexpectedly.
+2017-02-20 07:03:20.7228|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.missedinhistory.com/symhc/2017-02-13-symhc-japanese-internment-1.mp3?awCollectionId=1002&awEpisodeId=923223Object reference not set to an instance of an object.
+2017-02-20 07:03:34.2219|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.stuffmomnevertoldyou.com/smnty/2015-06-01-smnty-trans-tv-1.mp3?awCollectionId=1007&awEpisodeId=898148Object reference not set to an instance of an object.
+2017-02-20 07:03:38.2549|ERROR|ClassLibrary.FirstTask.Measures|http://variety.com/2015/film/news/laverne-cox-transgender-hollywood-orange-is-the-new-black-bruce-jenner-1201486886/The underlying connection was closed: The connection was closed unexpectedly.
+2017-02-20 07:03:41.4082|ERROR|ClassLibrary.FirstTask.Measures|http://www.podtrac.com/pts/redirect.mp3/streaming.stuffmomnevertoldyou.com/smnty/2015-06-03-smnty-trans-tv-2.mp3?awCollectionId=1007&awEpisodeId=898150Object reference not set to an instance of an object.
+2017-02-20 07:03:50.1174|ERROR|ClassLibrary.FirstTask.Measures|https://ar-ar.facebook.com/allactivity?privacy_source=activity_log_top_menuThe request was aborted: The connection was closed unexpectedly.
+2017-02-20 07:03:50.2480|ERROR|ClassLibrary.FirstTask.Measures|https://ar-ar.facebook.com/allactivity?privacy_source=activity_log_top_menuThe request was aborted: The connection was closed unexpectedly.
+2017-02-20 07:03:52.1286|ERROR|ClassLibrary.FirstTask.Measures|http://www.google.com/intl/en/policies/privacy/google_privacy_policy_en.pdfObject reference not set to an instance of an object.
+2017-02-20 07:06:06.3416|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Cancel crawling
+2017-02-20 07:06:06.3466|TRACE|ClassLibrary.FirstTask.Crawling|Finish
+2017-02-20 07:06:14.7579|ERROR|ClassLibrary.FirstTask.Measures|http://www.sciencedirect.com/science/article/pii/S0094730X13000648The operation has timed out
+2017-02-20 07:08:12.6476|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://www.meteoprog.ua/ua/ in 12 threads
+2017-02-20 07:16:39.8655|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://www.meteoprog.ua/ua/ in 14 threads
+2017-02-20 07:20:30.6053|TRACE|ClassLibrary.FirstTask.WatcherForCommand|Start crawl https://yandex.ua/pogoda/moscow in 12 threads

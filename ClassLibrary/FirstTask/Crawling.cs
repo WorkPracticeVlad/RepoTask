@@ -15,7 +15,7 @@ namespace ClassLibrary.FirstTask
         Logger lgr = LogManager.GetCurrentClassLogger();
         ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
         ConcurrentDictionary<string, string> urls = new ConcurrentDictionary<string, string>();
-        ConcurrentDictionary<string, bool> urlsDB = new ConcurrentDictionary<string, bool>();
+        ConcurrentDictionary<string, bool> urlsForDBSaving = new ConcurrentDictionary<string, bool>();
         ConcurrentDictionary<string, int> hosts = new ConcurrentDictionary<string, int>();
         PageUrls result = new PageUrls();
         Measures m = new Measures();
@@ -29,6 +29,7 @@ namespace ClassLibrary.FirstTask
         }
         public void StartCrawl(string url, int threadsCount)
         {
+            flagDB = true;
             cancelTicket = false;
             System.Threading.Tasks.Task.Run(() => ConsumerDbContext());
             Thread[] threads = new Thread[threadsCount];
@@ -98,9 +99,9 @@ namespace ClassLibrary.FirstTask
             CrawlExternalUrls(resultOfmeasure);
             if (cancelTicket)
                 return;
-            if (!urlsDB.ContainsKey(resultOfmeasure.Url))
+            if (!urlsForDBSaving.ContainsKey(resultOfmeasure.Url))
             {
-                urlsDB.TryAdd(resultOfmeasure.Url, false);
+                urlsForDBSaving.TryAdd(resultOfmeasure.Url, false);
             }
         }
         void ConsumerDbContext()
@@ -109,14 +110,14 @@ namespace ClassLibrary.FirstTask
             {
                 while (dicitonaryOfCrawledUrls.Count != 0)
                 {
-                    if (urlsDB.Where(u => u.Value == false).Count() != 0)
+                    if (urlsForDBSaving.Where(u => u.Value == false).Count() != 0)
                     {
-                        PageUrls[] items = new PageUrls[urlsDB.Where(u => u.Value == false).Count()];
+                        PageUrls[] items = new PageUrls[urlsForDBSaving.Where(u => u.Value == false).Count()];
                         for (int i = items.Length - 1; i >= 0; i--)
                         {
-                            if (dicitonaryOfCrawledUrls.ContainsKey(urlsDB.Where(u => u.Value == false).ElementAt(i).Key))
+                            if (dicitonaryOfCrawledUrls.ContainsKey(urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key))
                             {
-                                var temp = dicitonaryOfCrawledUrls.FirstOrDefault(p => p.Key == urlsDB.Where(u => u.Value == false).ElementAt(i).Key).Key;
+                                var temp = dicitonaryOfCrawledUrls.FirstOrDefault(p => p.Key == urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key).Key;
                                 if (temp != null)
                                 {
                                     dicitonaryOfCrawledUrls.
@@ -150,7 +151,7 @@ namespace ClassLibrary.FirstTask
                                     items[i].Fk_Hosts_Id = hostCount;
                                 }
                             }
-                            urlsDB[items[i].Url] = true;
+                            urlsForDBSaving[items[i].Url] = true;
                         }
                         _repo.AddPageOrUpdate(items.ToList());
                         Console.WriteLine("\n Saving to DB \n");
@@ -162,13 +163,24 @@ namespace ClassLibrary.FirstTask
                 if (cancelTicket)
                     break;
             }
+            // Clear();
             //_repo.Dispose();
             lgr.Trace("Finish");
         }
         public void Cancel()
         {
             //_repo.Dispose();
+            Clear();
             cancelTicket = true;
+        }
+        void Clear()
+        {
+            dicitonaryOfCrawledUrls.Clear();
+            urls.Clear();
+            urlsForDBSaving.Clear();
+            hosts.Clear();
+            hostCount = 0;
+            result = null;
         }
     }
 }
