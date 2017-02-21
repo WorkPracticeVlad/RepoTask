@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2e04ba4725994a27858313231b6e8186" Name="Diagram1">
+      <Diagram DiagramId="10910535435e485f933bda232eeb0220" Name="Diagram1">
         <EntityTypeShape EntityType="FistTaskModel.CssLinks" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FistTaskModel.ExternalUrls" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FistTaskModel.Hosts" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FistTaskModel.ImgSources" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="FistTaskModel.InternalUrls" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FistTaskModel.PageUrls" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <AssociationConnector Association="FistTaskModel.FK__CssLinks__Fk_Pag__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="FistTaskModel.FK__ExternalU__Fk_Pa__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="FistTaskModel.FK__PageUrls__Fk_Hos__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="FistTaskModel.FK__ImgSource__Fk_Pa__3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="FistTaskModel.FK__InternalU__Fk_Pa__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__CssLinks__Fk_Pag__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__ExternalU__Fk_Pa__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__PageUrls__Fk_Hos__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__ImgSource__Fk_Pa__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="FistTaskModel.FK__InternalU__Fk_Pa__1B0907CE" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,16 +1,15 @@
-﻿using ClassLibrary.Data;
-using StructureMap;
+﻿using StructureMap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication
+namespace ClassLibrary.Data
 {
-    class AppRegistry : Registry
+   public class LibRegistry : Registry
     {
-        public AppRegistry()
+        public LibRegistry()
         {
             Scan(scan =>
             {

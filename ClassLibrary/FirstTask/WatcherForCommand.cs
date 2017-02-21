@@ -1,5 +1,6 @@
 ﻿using ClassLibrary.Data;
 using NLog;
+using StructureMap;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,18 +16,14 @@ namespace ClassLibrary.FirstTask
         FileSystemWatcher watcherForCrawl = new FileSystemWatcher();
         FileSystemWatcher watcherForTree = new FileSystemWatcher();        
         Logger lgr = LogManager.GetCurrentClassLogger();
-        private IRepository _repo;
-        public WatcherForCommand(IRepository repo)
+        IContainer con = Container.For<LibRegistry>();
+        Crawling cr;
+        SiteTreeBuilder tb;
+        Measures m = new Measures();
+        public void StartWatch(string startOrCancelPath, string treePath)
         {
-            _repo = repo;
-        }
-        public void WatchFolderStartOrCancel(string path)
-        {
-            WatchTxt(path, watcherForCrawl, new FileSystemEventHandler(OnChangedStartOrCancel));           
-        }
-        public void WatchFolderTree(string path)
-        {
-            WatchTxt(path, watcherForTree, new FileSystemEventHandler(OnChangedTree));          
+            WatchTxt(treePath, watcherForTree, new FileSystemEventHandler(OnChangedTree));
+            WatchTxt(startOrCancelPath, watcherForCrawl, new FileSystemEventHandler(OnChangedStartOrCancel));   
         }
         void OnChangedStartOrCancel(object source, FileSystemEventArgs e)
         {
@@ -39,18 +36,18 @@ namespace ClassLibrary.FirstTask
                 }
                 var command = System.IO.File.ReadAllText(@"C:\Users\vorlov\Desktop\FistTaskStart\Command.txt");
                 string[] splitCommand = command.Split();
-                var pr = new Crawling(_repo);
+                cr = con.GetInstance<Crawling>();
                 if (splitCommand.Length == 2)
                 {
                     watcherForCrawl.EnableRaisingEvents = true;
                     lgr.Trace("Start crawl "+splitCommand[0]+" in "+splitCommand[1]+" threads");
-                    System.Threading.Tasks.Task.Run(() => pr.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
+                    System.Threading.Tasks.Task.Run(() => cr.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
                 }
                 else
                 {
                     watcherForCrawl.EnableRaisingEvents = true;
                     lgr.Trace("Cancel crawling");
-                    System.Threading.Tasks.Task.Run(() => pr.Cancel());
+                    System.Threading.Tasks.Task.Run(() => cr.Cancel());
                 }
             }
             catch (Exception ex)
@@ -68,11 +65,8 @@ namespace ClassLibrary.FirstTask
                     Thread.Sleep(500);
                 }
                 var fullUrl = System.IO.File.ReadAllText(@"C:\Users\vorlov\Desktop\BuildTree\Demand.txt");
-                var myUri = new Uri(fullUrl);
-                var protocol = myUri.Scheme;
-                var host = myUri.Host;
-                var fullHost = protocol + "://" + host;
-                var tb = new SiteTreeBuilder(_repo);
+                var fullHost = m.HostFullAdr(fullUrl);
+                tb = con.GetInstance<SiteTreeBuilder>();
                 tb.WriteTree(@"C:\Users\vorlov\Desktop\Output\Tree.txt", fullHost);
                 lgr.Trace("Build tree for "+fullUrl);
                 watcherForTree.EnableRaisingEvents = true;
@@ -107,6 +101,11 @@ namespace ClassLibrary.FirstTask
             watcher.Filter = "*.txt";
             watcher.Changed +=handler;
             watcher.EnableRaisingEvents = true;
+        }
+        public void Dispose()
+        {
+            tb.Dispose();
+            cr.Dispose();
         }
     }
 }

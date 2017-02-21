@@ -17,3 +17,5 @@ C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ConsoleApplicatio
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ConsoleApplication\bin\Debug\NLog.config
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ConsoleApplication\bin\Debug\NLog.dll
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ConsoleApplication\bin\Debug\NLog.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApplication\bin\Debug\Topshelf.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ConsoleApplication\bin\Debug\Topshelf.xml

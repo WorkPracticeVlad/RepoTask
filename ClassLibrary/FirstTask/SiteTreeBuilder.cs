@@ -39,5 +39,9 @@ namespace ClassLibrary.FirstTask
             Console.WriteLine(readText);
             //_repo.Dispose();
         }
+        public void Dispose()
+        {
+            _repo.Dispose();
+        }
     }
 }

@@ -10,8 +10,7 @@ namespace ClassLibrary.Data
     {
         void AddPageOrUpdate(IEnumerable<PageUrls> items);
         int? GetHostIdIfExist(string hostName);
-        int GetHostsCount();
-        void AddHost(int id, string hostName);
+        void AddHost(string hostName);
         List<string> GetUrlsForHost(string hostUrl);
     }
 }

@@ -46,6 +46,8 @@ namespace ClassLibrary.FirstTask
         }
         PageUrls CrawlOneUrlProducer(string fullUrl)
         {
+            if (cancelTicket)
+                return null;
             var result = m.TakeMesuares(fullUrl);
             dicitonaryOfCrawledUrls.TryAdd(result.Url, result);
             urls.TryAdd(result.Url, result.Url);
@@ -83,7 +85,8 @@ namespace ClassLibrary.FirstTask
             int threadName = Int32.Parse(Thread.CurrentThread.Name);
             if (!urls.ContainsKey(url))
                 result = CrawlOneUrlProducer(url);
-            CrawlUrls(dicitonaryOfCrawledUrls.ElementAt(0).Value);
+            if(!dicitonaryOfCrawledUrls.IsEmpty)
+                CrawlUrls(dicitonaryOfCrawledUrls.ElementAt(0).Value);
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
                 var temp = dicitonaryOfCrawledUrls.ElementAtOrDefault(threadName);
@@ -117,42 +120,18 @@ namespace ClassLibrary.FirstTask
                         {
                             if (dicitonaryOfCrawledUrls.ContainsKey(urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key))
                             {
-                                var temp = dicitonaryOfCrawledUrls.FirstOrDefault(p => p.Key == urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key).Key;
+                                //var temp = dicitonaryOfCrawledUrls.FirstOrDefault(p => p.Key == urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key).Key;
+                                PageUrls temp;
+                                dicitonaryOfCrawledUrls.TryGetValue(urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key, out temp);
                                 if (temp != null)
                                 {
                                     dicitonaryOfCrawledUrls.
-                                    TryRemove(temp,
+                                    TryRemove(temp.Url,/*temp,*/
                                    out items[i]);
                                 }
                             }
                         }
-                        items = items.Where(c => c != null).ToArray();
-                        for (int i = 0; i < items.Length; i++)
-                        {
-                            var hostName = m.HostFullAdr(items[i].Url);
-                            if (hosts.ContainsKey(hostName))
-                            {
-                                items[i].Fk_Hosts_Id = hosts[hostName];
-                            }
-                            else
-                            {
-                                int? hostId = _repo.GetHostIdIfExist(hostName);
-                                if (hostId != null)
-                                {
-                                    hosts.TryAdd(hostName, (int)hostId);
-                                    items[i].Fk_Hosts_Id = (int)hostId;
-                                }
-                                else
-                                {
-                                    hostCount = _repo.GetHostsCount();
-                                    hostCount++;
-                                    _repo.AddHost(hostCount, hostName);
-                                    hosts.TryAdd(hostName, hostCount);
-                                    items[i].Fk_Hosts_Id = hostCount;
-                                }
-                            }
-                            urlsForDBSaving[items[i].Url] = true;
-                        }
+                        items = AddHostConnection(items);
                         _repo.AddPageOrUpdate(items.ToList());
                         Console.WriteLine("\n Saving to DB \n");
                     }
@@ -163,15 +142,16 @@ namespace ClassLibrary.FirstTask
                 if (cancelTicket)
                     break;
             }
-            // Clear();
             //_repo.Dispose();
             lgr.Trace("Finish");
+            Clear();
         }
         public void Cancel()
         {
-            //_repo.Dispose();
-            Clear();
+            //_repo.Dispose();         
             cancelTicket = true;
+            Thread.Sleep(750);
+            Clear();
         }
         void Clear()
         {
@@ -181,6 +161,41 @@ namespace ClassLibrary.FirstTask
             hosts.Clear();
             hostCount = 0;
             result = null;
+        }
+        private PageUrls[] AddHostConnection(PageUrls[] items)
+        {
+            items = items.Where(c => c != null).ToArray();
+            for (int i = 0; i < items.Length; i++)
+            {
+                var hostName = m.HostFullAdr(items[i].Url);
+                if (hosts.ContainsKey(hostName))
+                {
+                    items[i].Fk_Hosts_Id = hosts[hostName];
+                }
+                else
+                {
+                    int? hostId = _repo.GetHostIdIfExist(hostName);
+                    if (hostId != null)
+                    {
+                        hosts.TryAdd(hostName, (int)hostId);
+                        items[i].Fk_Hosts_Id = (int)hostId;
+                    }
+                    else
+                    {
+                        _repo.AddHost(hostName);
+                        hostCount = (int)_repo.GetHostIdIfExist(hostName);//.GetHostsCount();
+                        //hostCount++;                                    
+                        hosts.TryAdd(hostName, hostCount);
+                        items[i].Fk_Hosts_Id = hostCount;
+                    }
+                }
+                urlsForDBSaving[items[i].Url] = true;
+            }
+            return items;
+        }
+        public void Dispose()
+        {
+            _repo.Dispose();
         }
     }
 }

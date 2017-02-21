@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceForeTask", "WindowsServiceForeTask\WindowsServiceForeTask.csproj", "{24B8323B-5FC7-4C10-8707-1453AB5D348F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{BB5FC4D1-008F-4181-99AA-7EE6D0427143}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{293AD174-1538-4FC5-95FD-25B37AC3AC26}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24B8323B-5FC7-4C10-8707-1453AB5D348F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24B8323B-5FC7-4C10-8707-1453AB5D348F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24B8323B-5FC7-4C10-8707-1453AB5D348F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24B8323B-5FC7-4C10-8707-1453AB5D348F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB5FC4D1-008F-4181-99AA-7EE6D0427143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB5FC4D1-008F-4181-99AA-7EE6D0427143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5FC4D1-008F-4181-99AA-7EE6D0427143}.Release|Any CPU.ActiveCfg = Release|Any CPU

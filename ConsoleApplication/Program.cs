@@ -1,4 +1,5 @@
-﻿using ClassLibrary.FirstTask;
+﻿using ClassLibrary.Data;
+using ClassLibrary.FirstTask;
 using NLog;
 using StructureMap;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Topshelf;
 
 namespace ConsoleApplication
 {
@@ -13,20 +15,34 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var con = Container.For<AppRegistry>();
+        //    HostFactory.Run(configure =>
+        //    {
+        //        configure.Service<MyService>(service =>
+        //        {
+        //            service.ConstructUsing(s => new MyService());
+        //            service.WhenStarted(s => s.OnStart());
+        //            service.WhenStopped(s => s.OnStop());
+        //        });
+        //        configure.RunAsNetworkService();
+        //        configure.SetServiceName("MyWindowServiceWithTopshelf");
+        //        configure.SetDisplayName("MyWindowServiceWithTopshelf");
+        //        configure.SetDescription("My .Net windows service with Topshelf");
+        //    });
+            WorkConsApp();
+        }
+        static void WorkConsApp()
+        {
+            var con = Container.For<LibRegistry>();
             var wt = con.GetInstance<WatcherForCommand>();
             Logger lgr = LogManager.GetCurrentClassLogger();
             try
-            {
-                wt.WatchFolderTree(@"C:\Users\vorlov\Desktop\BuildTree");
-                wt.WatchFolderStartOrCancel(@"C:\Users\vorlov\Desktop\FistTaskStart");
+            {            
+                wt.StartWatch(@"C:\Users\vorlov\Desktop\FistTaskStart", @"C:\Users\vorlov\Desktop\BuildTree");
             }
             catch (Exception ex)
             {
-
                 lgr.Error(ex.Message + Environment.NewLine + ex.InnerException);
             }
-           
             Console.ReadKey();
         }
     }

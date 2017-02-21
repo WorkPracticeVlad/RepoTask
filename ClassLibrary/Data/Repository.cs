@@ -114,17 +114,12 @@ namespace ClassLibrary.Data
                 return host.Id;
             return null;
         }
-        public void AddHost(int id, string hostName)
+        public void AddHost(string hostName)
         {
             var host = new Hosts();
             host.Host = hostName;
-            host.Id = id;
             _ctx.Hosts.Add(host);
             _ctx.SaveChanges();
-        }
-        public int GetHostsCount()
-        {
-            return _ctx.Hosts.Count();
         }
     }
 }

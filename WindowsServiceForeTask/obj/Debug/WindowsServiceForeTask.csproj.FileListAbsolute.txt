@@ -12,3 +12,6 @@ C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\WindowsServiceFor
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\EntityFramework.xml
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\NLog.config
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\NLog.dll
+C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\WindowsServiceForeTask\bin\Debug\NLog.xml

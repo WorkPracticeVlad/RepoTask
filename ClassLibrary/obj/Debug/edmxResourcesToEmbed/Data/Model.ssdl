@@ -20,8 +20,8 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="Host" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Host" Type="nvarchar" MaxLength="450" Nullable="false" />
   </EntityType>
   <EntityType Name="ImgSources">
     <Key>
@@ -49,7 +49,7 @@
     <Property Name="HtmlSize" Type="int" />
     <Property Name="Fk_Hosts_Id" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__CssLinks__Fk_Pag__3B75D760">
+  <Association Name="FK__CssLinks__Fk_Pag__15502E78">
     <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
     <End Role="CssLinks" Type="Self.CssLinks" Multiplicity="*" />
     <ReferentialConstraint>
@@ -61,7 +61,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ExternalU__Fk_Pa__440B1D61">
+  <Association Name="FK__ExternalU__Fk_Pa__1DE57479">
     <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
     <End Role="ExternalUrls" Type="Self.ExternalUrls" Multiplicity="*" />
     <ReferentialConstraint>
@@ -73,7 +73,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ImgSource__Fk_Pa__3E52440B">
+  <Association Name="FK__ImgSource__Fk_Pa__182C9B23">
     <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
     <End Role="ImgSources" Type="Self.ImgSources" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,7 +85,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__InternalU__Fk_Pa__412EB0B6">
+  <Association Name="FK__InternalU__Fk_Pa__1B0907CE">
     <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="1" />
     <End Role="InternalUrls" Type="Self.InternalUrls" Multiplicity="*" />
     <ReferentialConstraint>
@@ -97,7 +97,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PageUrls__Fk_Hos__38996AB5">
+  <Association Name="FK__PageUrls__Fk_Hos__1273C1CD">
     <End Role="Hosts" Type="Self.Hosts" Multiplicity="1" />
     <End Role="PageUrls" Type="Self.PageUrls" Multiplicity="*" />
     <ReferentialConstraint>
@@ -116,23 +116,23 @@
     <EntitySet Name="ImgSources" EntityType="Self.ImgSources" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="InternalUrls" EntityType="Self.InternalUrls" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PageUrls" EntityType="Self.PageUrls" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__CssLinks__Fk_Pag__3B75D760" Association="Self.FK__CssLinks__Fk_Pag__3B75D760">
+    <AssociationSet Name="FK__CssLinks__Fk_Pag__15502E78" Association="Self.FK__CssLinks__Fk_Pag__15502E78">
       <End Role="PageUrls" EntitySet="PageUrls" />
       <End Role="CssLinks" EntitySet="CssLinks" />
     </AssociationSet>
-    <AssociationSet Name="FK__ExternalU__Fk_Pa__440B1D61" Association="Self.FK__ExternalU__Fk_Pa__440B1D61">
+    <AssociationSet Name="FK__ExternalU__Fk_Pa__1DE57479" Association="Self.FK__ExternalU__Fk_Pa__1DE57479">
       <End Role="PageUrls" EntitySet="PageUrls" />
       <End Role="ExternalUrls" EntitySet="ExternalUrls" />
     </AssociationSet>
-    <AssociationSet Name="FK__ImgSource__Fk_Pa__3E52440B" Association="Self.FK__ImgSource__Fk_Pa__3E52440B">
+    <AssociationSet Name="FK__ImgSource__Fk_Pa__182C9B23" Association="Self.FK__ImgSource__Fk_Pa__182C9B23">
       <End Role="PageUrls" EntitySet="PageUrls" />
       <End Role="ImgSources" EntitySet="ImgSources" />
     </AssociationSet>
-    <AssociationSet Name="FK__InternalU__Fk_Pa__412EB0B6" Association="Self.FK__InternalU__Fk_Pa__412EB0B6">
+    <AssociationSet Name="FK__InternalU__Fk_Pa__1B0907CE" Association="Self.FK__InternalU__Fk_Pa__1B0907CE">
       <End Role="PageUrls" EntitySet="PageUrls" />
       <End Role="InternalUrls" EntitySet="InternalUrls" />
     </AssociationSet>
-    <AssociationSet Name="FK__PageUrls__Fk_Hos__38996AB5" Association="Self.FK__PageUrls__Fk_Hos__38996AB5">
+    <AssociationSet Name="FK__PageUrls__Fk_Hos__1273C1CD" Association="Self.FK__PageUrls__Fk_Hos__1273C1CD">
       <End Role="Hosts" EntitySet="Hosts" />
       <End Role="PageUrls" EntitySet="PageUrls" />
     </AssociationSet>
