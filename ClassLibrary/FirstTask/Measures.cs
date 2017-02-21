@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.FirstTask
 {
-    class Measures
+    public class Measures
     {
         Stopwatch _timeSpan = new Stopwatch();
         Logger lgr= LogManager.GetCurrentClassLogger();
@@ -28,7 +28,7 @@ namespace ClassLibrary.FirstTask
                 byte[] toBytes = Encoding.ASCII.GetBytes(html);
                 int x = toBytes.Length;
                 int htmlSize = System.Text.ASCIIEncoding.Unicode.GetByteCount(html);
-                var cssLinksHrefs = GetcssLinksHrefs(document);
+                var cssLinksHrefs = GetCssLinksHrefs(document);
                 var imgSources = GetImgSources(document);
                 var urlsInternal = GetUrlsInternal(GetHrefs(document, fullUrl), fullUrl);
                 var urlsExternal = GetUrlsExtrnal(GetHrefs(document, fullUrl), fullUrl);
@@ -48,7 +48,7 @@ namespace ClassLibrary.FirstTask
                 return res;
             }
         }
-        List<CssLinks> GetcssLinksHrefs(HtmlDocument document)
+        List<CssLinks> GetCssLinksHrefs(HtmlDocument document)
         {
             var linkTags = document.DocumentNode.Descendants("link").Select(e => new { rel = e.GetAttributeValue("rel", null), href = e.GetAttributeValue("href", null) });
             List<CssLinks> linksSource = new List<CssLinks>();
@@ -79,7 +79,7 @@ namespace ClassLibrary.FirstTask
             hrefs = UrlsClean(hrefs, url);
             return hrefs.Distinct().ToList();
         }
-        List<string> UrlsClean(List<string> hrefs, string url)
+        public List<string> UrlsClean(List<string> hrefs, string url)
         {
             List<string> urlCleanList = new List<string>();
             foreach (var href in hrefs)

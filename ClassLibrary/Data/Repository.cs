@@ -15,6 +15,7 @@ namespace ClassLibrary.Data
         }
         public void AddPageOrUpdate(IEnumerable<PageUrls> items)
         {
+            //opt
             foreach (var item in items)
             {
                 var itemDB = _ctx.PageUrls.Where(p => p.Url == item.Url)
