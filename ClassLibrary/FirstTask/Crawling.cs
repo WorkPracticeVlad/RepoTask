@@ -50,7 +50,7 @@ namespace ClassLibrary.FirstTask
             var result = measures.TakeMesuares(fullUrl);
             dicitonaryOfCrawledUrls.TryAdd(result.Url, result);
             urlsForCheck.TryAdd(result.Url, result.Url);
-            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " processing to list url: " + result.Url);
+            //Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " processing to list url: " + result.Url);
             return result;
         }
         void CrawlInternalUrls(PageUrls page)
@@ -131,7 +131,7 @@ namespace ClassLibrary.FirstTask
                         }
                         items = AddHostConnection(items);
                         _repo.AddPageOrUpdate(items.ToList());
-                        Console.WriteLine("\n Saving to DB \n");
+                        //Console.WriteLine("\n Saving to DB \n");
                     }
                     if (cancelTicket)
                         break;

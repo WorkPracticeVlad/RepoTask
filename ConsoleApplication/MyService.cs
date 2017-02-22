@@ -12,25 +12,25 @@ namespace ConsoleApplication
 {
     public class MyService
     {
-        IContainer con = Container.For<LibRegistry>();
-        WatcherForCommand wt;
-        Logger lgr = LogManager.GetCurrentClassLogger();
+        IContainer container = Container.For<LibRegistry>();
+        WatcherForCommand watcher;
+        Logger logger = LogManager.GetCurrentClassLogger();
         public void OnStart()
         {
-            wt = con.GetInstance<WatcherForCommand>();
+            watcher = container.GetInstance<WatcherForCommand>();
             try
             {
-                wt.StartWatch(@"C:\Users\vorlov\Desktop\FistTaskStart", @"C:\Users\vorlov\Desktop\BuildTree");
+                watcher.StartWatch(@"C:\Users\vorlov\Desktop\FistTaskStart", @"C:\Users\vorlov\Desktop\BuildTree");
             }
             catch (Exception ex)
             {
-                lgr.Error(ex.Message + Environment.NewLine + ex.InnerException);
+                logger.Error(ex.Message + Environment.NewLine + ex.InnerException);
             }
-            Console.ReadKey();
+
         }
         public void OnStop()
         {
-            wt.Dispose();
+            watcher.Dispose();
         }
     }
 }

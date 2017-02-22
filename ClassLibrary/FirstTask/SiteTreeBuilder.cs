@@ -36,7 +36,7 @@ namespace ClassLibrary.FirstTask
             string appendText = "This is extra text" + Environment.NewLine + BuildTreeString(url, urls);
             File.AppendAllText(path, appendText);
             string readText = File.ReadAllText(path);
-            Console.WriteLine(readText);
+            //Console.WriteLine(readText);
         }
         public void Dispose()
         {
