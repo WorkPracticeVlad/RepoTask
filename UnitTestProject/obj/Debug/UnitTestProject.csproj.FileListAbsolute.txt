@@ -2,7 +2,6 @@ C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\b
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\UnitTestProject.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\UnitTestProject.pdb
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\ClassLibrary.dll
-C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\NLog.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\HtmlAgilityPack.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\StructureMap.dll
@@ -15,3 +14,9 @@ C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\b
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\Castle.Core.dll
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\Moq.dll
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\nunit.framework.dll
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\Castle.Core.xml
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\Moq.xml
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\UnitTestProject\bin\Debug\nunit.framework.xml

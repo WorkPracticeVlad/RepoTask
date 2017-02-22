@@ -15,7 +15,7 @@ namespace ClassLibrary.FirstTask
             _repo = repo;
         }
         private IRepository _repo;
-        string BuildSiteTreeString(string url, List<string> urls)
+        string BuildTreeString(string url, List<string> urls)
         {
             var builder = new StringBuilder();
             urls.Sort();
@@ -25,19 +25,18 @@ namespace ClassLibrary.FirstTask
             }
             return builder.ToString();
         }
-        internal void WriteTree(string path, string url)
+        public void WriteTree(string path, string url)
         {
             List<string> urls = _repo.GetUrlsForHost(url);
             if (!File.Exists(path))
             {
-                string createText = "Hello and Welcome" + Environment.NewLine + BuildSiteTreeString(url, urls);
+                string createText = "Hello and Welcome" + Environment.NewLine + BuildTreeString(url, urls);
                 File.WriteAllText(path, createText);
             }
-            string appendText = "This is extra text" + Environment.NewLine + BuildSiteTreeString(url, urls);
+            string appendText = "This is extra text" + Environment.NewLine + BuildTreeString(url, urls);
             File.AppendAllText(path, appendText);
             string readText = File.ReadAllText(path);
             Console.WriteLine(readText);
-            //_repo.Dispose();
         }
         public void Dispose()
         {

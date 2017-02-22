@@ -15,10 +15,10 @@ namespace ClassLibrary.FirstTask
     {
         FileSystemWatcher watcherForCrawl = new FileSystemWatcher();
         FileSystemWatcher watcherForTree = new FileSystemWatcher();        
-        Logger lgr = LogManager.GetCurrentClassLogger();
-        IContainer con = Container.For<LibRegistry>();
-        Crawling cr;
-        SiteTreeBuilder tb;
+        Logger logger = LogManager.GetCurrentClassLogger();
+        IContainer container = Container.For<LibRegistry>();
+        Crawling crawler;
+        SiteTreeBuilder treeBuilder;
         Measures m = new Measures();
         public void StartWatch(string startOrCancelPath, string treePath)
         {
@@ -30,29 +30,29 @@ namespace ClassLibrary.FirstTask
             try
             {
                 watcherForCrawl.EnableRaisingEvents = false;
-                while (IsFileLocked(@"C:\Users\vorlov\Desktop\FistTaskStart\Command.txt"))
+                while (IsFileLocked(e.FullPath))
                 {
                     Thread.Sleep(500);
                 }
-                var command = System.IO.File.ReadAllText(@"C:\Users\vorlov\Desktop\FistTaskStart\Command.txt");
+                var command = System.IO.File.ReadAllText(e.FullPath);
                 string[] splitCommand = command.Split();
-                cr = con.GetInstance<Crawling>();
+                crawler = container.GetInstance<Crawling>();
                 if (splitCommand.Length == 2)
                 {
                     watcherForCrawl.EnableRaisingEvents = true;
-                    lgr.Trace("Start crawl "+splitCommand[0]+" in "+splitCommand[1]+" threads");
-                    System.Threading.Tasks.Task.Run(() => cr.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
+                    logger.Trace("Start crawl "+splitCommand[0]+" in "+splitCommand[1]+" threads");
+                    System.Threading.Tasks.Task.Run(() => crawler.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
                 }
                 else
                 {
                     watcherForCrawl.EnableRaisingEvents = true;
-                    lgr.Trace("Cancel crawling");
-                    System.Threading.Tasks.Task.Run(() => cr.Cancel());
+                    logger.Trace("Cancel crawling");
+                    System.Threading.Tasks.Task.Run(() => crawler.Cancel());
                 }
             }
             catch (Exception ex)
             {
-                lgr.Error(ex.Message + Environment.NewLine + ex.InnerException);
+                logger.Error(ex.Message + Environment.NewLine + ex.InnerException);
             }         
         }
         void OnChangedTree(object source, FileSystemEventArgs e)
@@ -60,23 +60,23 @@ namespace ClassLibrary.FirstTask
             try
             {
                 watcherForTree.EnableRaisingEvents = false;
-                while (IsFileLocked(@"C:\Users\vorlov\Desktop\BuildTree\Demand.txt"))
+                while (IsFileLocked(e.FullPath))
                 {
                     Thread.Sleep(500);
                 }
-                var fullUrl = System.IO.File.ReadAllText(@"C:\Users\vorlov\Desktop\BuildTree\Demand.txt");
+                var fullUrl = System.IO.File.ReadAllText(e.FullPath);
                 var fullHost = m.HostFullAdr(fullUrl);
-                tb = con.GetInstance<SiteTreeBuilder>();
-                tb.WriteTree(@"C:\Users\vorlov\Desktop\Output\Tree.txt", fullHost);
-                lgr.Trace("Build tree for "+fullUrl);
+                treeBuilder = container.GetInstance<SiteTreeBuilder>();
+                treeBuilder.WriteTree(Environment.CurrentDirectory+"\\SiteTreeOut.txt", fullHost);
+                logger.Trace("Build tree for "+fullUrl);
                 watcherForTree.EnableRaisingEvents = true;
             }
             catch (Exception ex)
             {
-                lgr.Error(ex.Message + Environment.NewLine + ex.InnerException);
+                logger.Error(ex.Message + Environment.NewLine + ex.InnerException);
             }        
         }
-        private bool IsFileLocked(string path)
+        bool IsFileLocked(string path)
         {
             FileStream stream = null;
             try
@@ -104,8 +104,8 @@ namespace ClassLibrary.FirstTask
         }
         public void Dispose()
         {
-            tb.Dispose();
-            cr.Dispose();
+            treeBuilder.Dispose();
+            crawler.Dispose();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace ClassLibrary.Data
 {
-   public class Repository : IRepository
+    public class Repository : IRepository
     {
         private FistTaskEntities _ctx;
         public Repository()
@@ -15,14 +15,16 @@ namespace ClassLibrary.Data
         }
         public void AddPageOrUpdate(IEnumerable<PageUrls> items)
         {
-            //opt
-            foreach (var item in items)
-            {
-                var itemDB = _ctx.PageUrls.Where(p => p.Url == item.Url)
+            var urls = items.Select(r => r.Url).ToArray();
+            var itemsDB = _ctx.PageUrls.Where(item => urls.Contains(item.Url))
                     .Include(c => c.CssLinks)
                     .Include(i => i.ImgSources)
                     .Include(u => u.InternalUrls)
                     .Include(e => e.ExternalUrls)
+                    .ToArray();
+            foreach (var item in items)
+            {
+                var itemDB = itemsDB.Where(p => p.Url == item.Url)
                     .SingleOrDefault();
                 if (itemDB == null)
                 {

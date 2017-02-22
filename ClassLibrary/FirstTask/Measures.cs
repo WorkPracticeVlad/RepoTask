@@ -13,7 +13,7 @@ namespace ClassLibrary.FirstTask
     public class Measures
     {
         Stopwatch _timeSpan = new Stopwatch();
-        Logger lgr= LogManager.GetCurrentClassLogger();
+        Logger logger= LogManager.GetCurrentClassLogger();
         public PageUrls TakeMesuares(string fullUrl)
         {
             var res = new PageUrls();
@@ -43,7 +43,7 @@ namespace ClassLibrary.FirstTask
             }
             catch (Exception e)
             {
-                lgr.Error(fullUrl+e.Message+e.InnerException);
+                logger.Error(fullUrl+e.Message+e.InnerException);
                 res.Url = fullUrl;
                 return res;
             }
@@ -136,7 +136,7 @@ namespace ClassLibrary.FirstTask
             }
             catch (Exception ex)
             {
-                lgr.Error(url + ex.Message + ex.InnerException);
+                logger.Error(url + ex.Message + ex.InnerException);
                 return "Uri ex";
             }
             
