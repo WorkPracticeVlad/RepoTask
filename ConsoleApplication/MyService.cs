@@ -28,9 +28,19 @@ namespace ConsoleApplication
             }
 
         }
+        
         public void OnStop()
         {
-            watcher.Dispose();
+            try
+            {
+                watcher.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                logger.Error(ex.Message + Environment.NewLine + ex.InnerException);
+            }
+            
         }
     }
 }

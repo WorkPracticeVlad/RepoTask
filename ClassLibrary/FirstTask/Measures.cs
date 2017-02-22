@@ -76,10 +76,10 @@ namespace ClassLibrary.FirstTask
             var hrefs = document.DocumentNode.Descendants("a")
                                            .Select(e => e.GetAttributeValue("href", null))
                                            .Where(u => !String.IsNullOrEmpty(u)).ToList();
-            hrefs = UrlsClean(hrefs, url);
+            hrefs = UrlsClean(hrefs);
             return hrefs.Distinct().ToList();
         }
-        public List<string> UrlsClean(List<string> hrefs, string url)
+        public List<string> UrlsClean(List<string> hrefs)
         {
             List<string> urlCleanList = new List<string>();
             foreach (var href in hrefs)

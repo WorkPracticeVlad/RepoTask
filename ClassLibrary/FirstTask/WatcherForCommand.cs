@@ -41,13 +41,14 @@ namespace ClassLibrary.FirstTask
                 {
                     watcherForCrawl.EnableRaisingEvents = true;
                     logger.Trace("Start crawl "+splitCommand[0]+" in "+splitCommand[1]+" threads");
-                    System.Threading.Tasks.Task.Run(() => crawler.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
+                    Task.Run(() => crawler.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
+                    logger.Trace("Start crawl Task finsh");
                 }
                 else
                 {
-                    watcherForCrawl.EnableRaisingEvents = true;
+                    watcherForCrawl.EnableRaisingEvents = true;      
+                    Task.Run(() => crawler.Cancel());
                     logger.Trace("Cancel crawling");
-                    System.Threading.Tasks.Task.Run(() => crawler.Cancel());
                 }
             }
             catch (Exception ex)
@@ -67,7 +68,7 @@ namespace ClassLibrary.FirstTask
                 var fullUrl = System.IO.File.ReadAllText(e.FullPath);
                 var fullHost = m.HostFullAdr(fullUrl);
                 treeBuilder = container.GetInstance<SiteTreeBuilder>();
-                treeBuilder.WriteTree(Environment.CurrentDirectory+"\\SiteTreeOut.txt", fullHost);
+                treeBuilder.WriteTree(@"C: \Users\vorlov\Desktop\Tree\SiteTreeOut.txt", fullHost);
                 logger.Trace("Build tree for "+fullUrl);
                 watcherForTree.EnableRaisingEvents = true;
             }

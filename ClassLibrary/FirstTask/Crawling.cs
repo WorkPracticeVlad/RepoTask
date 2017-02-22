@@ -94,6 +94,7 @@ namespace ClassLibrary.FirstTask
                 if (cancelTicket)
                     break;
             }
+            logger.Trace("Thread " + Thread.CurrentThread.ManagedThreadId + " finish");
         }
         private void CrawlUrls(PageUrls resultOfmeasure)
         {
@@ -141,8 +142,8 @@ namespace ClassLibrary.FirstTask
                     break;
             }
             //_repo.Dispose();
-            logger.Trace("Finish");
             Clear();
+            logger.Trace("Finish DB"); 
         }
         public void Cancel()
         {

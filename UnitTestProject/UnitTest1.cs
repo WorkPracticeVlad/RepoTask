@@ -50,7 +50,7 @@ namespace UnitTestProject
             "https://learn.javascript.ru/prototypes",
             "https://learn.javascript.ru/prototypes"
         };
-            CollectionAssert.AreEqual(expected, m.UrlsClean(urls, "https://learn.javascript.ru/cookie"));
+            CollectionAssert.AreEqual(expected, m.UrlsClean(urls));
         }
     }
 }
