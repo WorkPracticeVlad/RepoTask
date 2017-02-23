@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.FirstTask
 {
-    class SiteTreeBuilder
+   public class SiteTreeBuilder
     {
         public SiteTreeBuilder(IRepository repo)
         {
             _repo = repo;
         }
         private IRepository _repo;
-        string BuildTreeString(string url, List<string> urls)
+        string BuildTreeString( List<string> urls)
         {
             var builder = new StringBuilder();
             urls.Sort();
@@ -30,13 +30,12 @@ namespace ClassLibrary.FirstTask
             List<string> urls = _repo.GetUrlsForHost(url);
             if (!File.Exists(path))
             {
-                string createText = "Hello and Welcome" + Environment.NewLine + BuildTreeString(url, urls);
+                string createText = "Hello and Welcome " + Environment.NewLine;
                 File.WriteAllText(path, createText);
             }
-            string appendText = "This is extra text" + Environment.NewLine + BuildTreeString(url, urls);
+            string appendText = "This is tree" + Environment.NewLine + BuildTreeString(urls)+ Environment.NewLine;
             File.AppendAllText(path, appendText);
             string readText = File.ReadAllText(path);
-            //Console.WriteLine(readText);
         }
         public void Dispose()
         {

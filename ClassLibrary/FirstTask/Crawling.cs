@@ -50,7 +50,6 @@ namespace ClassLibrary.FirstTask
             var result = measures.TakeMesuares(fullUrl);
             dicitonaryOfCrawledUrls.TryAdd(result.Url, result);
             urlsForCheck.TryAdd(result.Url, result.Url);
-            //Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " processing to list url: " + result.Url);
             return result;
         }
         void CrawlInternalUrls(PageUrls page)
@@ -85,7 +84,11 @@ namespace ClassLibrary.FirstTask
             if (!urlsForCheck.ContainsKey(url))
                 result = CrawlOneUrlProducer(url);
             if (!dicitonaryOfCrawledUrls.IsEmpty)
-                CrawlUrls(dicitonaryOfCrawledUrls.ElementAt(0).Value);
+            {
+                if (threadName % 2 == 0)
+                    CrawlInternalUrls(dicitonaryOfCrawledUrls.ElementAt(0).Value);
+                CrawlExternalUrls(dicitonaryOfCrawledUrls.ElementAt(0).Value);
+            }
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
                 var temp = dicitonaryOfCrawledUrls.ElementAtOrDefault(threadName);
@@ -94,7 +97,7 @@ namespace ClassLibrary.FirstTask
                 if (cancelTicket)
                     break;
             }
-            logger.Trace("Thread " + Thread.CurrentThread.ManagedThreadId + " finish");
+            logger.Trace("Thread " + Thread.CurrentThread.Name + " finish");
         }
         private void CrawlUrls(PageUrls resultOfmeasure)
         {
@@ -111,7 +114,7 @@ namespace ClassLibrary.FirstTask
         {
             while (flagDB)
             {
-                while (dicitonaryOfCrawledUrls.Count != 0)
+                while (!dicitonaryOfCrawledUrls.IsEmpty)
                 {
                     if (urlsForDBSaving.Where(u => u.Value == false).Count() != 0)
                     {
@@ -130,9 +133,9 @@ namespace ClassLibrary.FirstTask
                                 }
                             }
                         }
-                        items = AddHostConnection(items);
+                        items = AddHostConnection(items, urlsForDBSaving);//,hosts,_repo);
                         _repo.AddPageOrUpdate(items.ToList());
-                        //Console.WriteLine("\n Saving to DB \n");
+                        logger.Trace("Save or update to DB " + items.Length + " pages");
                     }
                     if (cancelTicket)
                         break;
@@ -141,13 +144,11 @@ namespace ClassLibrary.FirstTask
                 if (cancelTicket)
                     break;
             }
-            //_repo.Dispose();
             Clear();
-            logger.Trace("Finish DB"); 
+            logger.Trace("Finish DB");
         }
         public void Cancel()
         {
-            //_repo.Dispose();         
             cancelTicket = true;
             Thread.Sleep(750);
             Clear();
@@ -160,7 +161,7 @@ namespace ClassLibrary.FirstTask
             hosts.Clear();
             result = null;
         }
-        PageUrls[] AddHostConnection(PageUrls[] items)
+        public PageUrls[] AddHostConnection(PageUrls[] items, ConcurrentDictionary<string, bool> urlsForDBSaving)//, ConcurrentDictionary<string, int> hosts, IRepository repo)
         {
             items = items.Where(c => c != null).ToArray();
             for (int i = 0; i < items.Length; i++)

@@ -36,67 +36,43 @@ namespace ClassLibrary.Data
                     _ctx.Entry(itemDB).CurrentValues.SetValues(item);
                     foreach (var itemChild in itemDB.CssLinks.ToList())
                     {
-                        if (!item.CssLinks.Any(c => c.Css == itemChild.Css && item.Url == itemChild.PageUrls.Url))
+                        if (!item.CssLinks.Any(c => c.Css == itemChild.Css))
                             _ctx.CssLinks.Remove(itemChild);
                     }
                     foreach (var itemChild in itemDB.ImgSources.ToList())
                     {
-                        if (!item.ImgSources.Any(c => c.Scr == itemChild.Scr && item.Url == itemChild.PageUrls.Url))
+                        if (!item.ImgSources.Any(c => c.Scr == itemChild.Scr ))
                             _ctx.ImgSources.Remove(itemChild);
                     }
                     foreach (var itemChild in itemDB.InternalUrls.ToList())
                     {
-                        if (!item.InternalUrls.Any(c => c.Url == c.Url && item.Url == itemChild.PageUrls.Url))
+                        if (!item.InternalUrls.Any(c => c.Url == c.Url ))
                             _ctx.InternalUrls.Remove(itemChild);
                     }
                     foreach (var itemChild in itemDB.ExternalUrls.ToList())
                     {
-                        if (!item.ExternalUrls.Any(c => c.Url == c.Url && item.Url == itemChild.PageUrls.Url))
+                        if (!item.ExternalUrls.Any(c => c.Url == c.Url ))
                             _ctx.ExternalUrls.Remove(itemChild);
                     }
                     foreach (var child in item.CssLinks)
                     {
-                        var existingChild = itemDB.CssLinks
-                            .Where(c => c.Css == child.Css && c.PageUrls.Url == item.Url)
-                            .FirstOrDefault();
-                        if (existingChild == null)
-                        {
-                            var newChild = new CssLinks { Css = child.Css };
-                            itemDB.CssLinks.Add(newChild);
-                        }
+                        if(!itemDB.CssLinks.Any(c => c.Css == child.Css))
+                            itemDB.CssLinks.Add(new CssLinks { Css = child.Css });                       
                     }
                     foreach (var child in item.ImgSources)
                     {
-                        var existingChild = itemDB.ImgSources
-                            .Where(c => c.Scr == child.Scr && c.PageUrls.Url == item.Url)
-                            .FirstOrDefault();
-                        if (existingChild == null)
-                        {
-                            var newChild = new ImgSources { Scr = child.Scr };
-                            itemDB.ImgSources.Add(newChild);
-                        }
+                        if (!itemDB.ImgSources.Any(i=>i.Scr==child.Scr))
+                            itemDB.ImgSources.Add(new ImgSources { Scr = child.Scr });                       
                     }
                     foreach (var child in item.InternalUrls)
                     {
-                        var existingChild = itemDB.InternalUrls
-                            .Where(c => c.Url == child.Url && c.PageUrls.Url == item.Url)
-                            .FirstOrDefault();
-                        if (existingChild == null)
-                        {
-                            var newChild = new InternalUrls { Url = child.Url };
-                            itemDB.InternalUrls.Add(newChild);
-                        }
+                        if (!itemDB.InternalUrls.Any(i => i.Url == child.Url))
+                            itemDB.InternalUrls.Add(new InternalUrls { Url = child.Url });                     
                     }
                     foreach (var child in item.ExternalUrls)
                     {
-                        var existingChild = itemDB.ExternalUrls
-                            .Where(c => c.Url == child.Url && c.PageUrls.Url == item.Url)
-                            .FirstOrDefault();
-                        if (existingChild == null)
-                        {
-                            var newChild = new ExternalUrls { Url = child.Url };
-                            itemDB.ExternalUrls.Add(newChild);
-                        }
+                        if (!itemDB.ExternalUrls.Any(i => i.Url == child.Url))
+                            itemDB.ExternalUrls.Add(new ExternalUrls { Url = child.Url });                       
                     }
                 }
             }

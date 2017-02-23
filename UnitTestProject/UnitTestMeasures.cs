@@ -9,15 +9,22 @@ using ClassLibrary.Data;
 namespace UnitTestProject
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestMeasures
     {       
-        Measures m = new Measures();
+        Measures measures = new Measures();
         [TestMethod]
         public void HostFullAdr_Url_Host()
         {
             string url = "http://stackoverflow.com/questions/16330404/how-to-remove-remote-origin-from-git-repo";
             string expected = "http://stackoverflow.com";
-            Assert.AreEqual(expected, m.HostFullAdr(url));
+            Assert.AreEqual(expected, measures.HostFullAdr(url));
+        }
+        [TestMethod]
+        public void HostFullAdr_Url_WrongHost()
+        {
+            string url = "http://stackoverflow.com/questions/16330404/how-to-remove-remote-origin-from-git-repo";
+            string expected = "http://stackoverflow.com/questions/";
+            Assert.AreNotEqual(expected, measures.HostFullAdr(url));
         }
         [TestMethod]
         public void UrlsClean_ListUrl_CleanList()
@@ -50,7 +57,7 @@ namespace UnitTestProject
             "https://learn.javascript.ru/prototypes",
             "https://learn.javascript.ru/prototypes"
         };
-            CollectionAssert.AreEqual(expected, m.UrlsClean(urls));
+            CollectionAssert.AreEqual(expected, measures.UrlsClean(urls));
         }
     }
 }
