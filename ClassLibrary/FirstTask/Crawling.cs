@@ -16,8 +16,7 @@ namespace ClassLibrary.FirstTask
         ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls = new ConcurrentDictionary<string, PageUrls>();
         ConcurrentDictionary<string, string> urlsForCheck = new ConcurrentDictionary<string, string>();
         ConcurrentDictionary<string, bool> urlsForDBSaving = new ConcurrentDictionary<string, bool>();
-        ConcurrentDictionary<string, int> hosts = new ConcurrentDictionary<string, int>();
-        PageUrls result = new PageUrls();
+        ConcurrentDictionary<string, int> hosts = new ConcurrentDictionary<string, int>();        
         Measures measures = new Measures();
         bool flagDB = true;
         static bool cancelTicket = false;
@@ -43,14 +42,13 @@ namespace ClassLibrary.FirstTask
                 threads[i].Join();
             }
         }
-        PageUrls CrawlOneUrlProducer(string fullUrl)
+        void CrawlOneUrlProducer(string fullUrl)
         {
             if (cancelTicket)
-                return null;
+                return;
             var result = measures.TakeMesuares(fullUrl);
             dicitonaryOfCrawledUrls.TryAdd(result.Url, result);
             urlsForCheck.TryAdd(result.Url, result.Url);
-            return result;
         }
         void CrawlInternalUrls(PageUrls page)
         {
@@ -58,10 +56,10 @@ namespace ClassLibrary.FirstTask
             {
                 foreach (var url in page.InternalUrls)
                 {
-                    if (!urlsForCheck.ContainsKey(url.Url))
-                        CrawlOneUrlProducer(url.Url);
                     if (cancelTicket)
                         return;
+                    if (!urlsForCheck.ContainsKey(url.Url))
+                        CrawlOneUrlProducer(url.Url);                 
                 }
             }
         }
@@ -71,10 +69,10 @@ namespace ClassLibrary.FirstTask
             {
                 foreach (var url in page.ExternalUrls)
                 {
-                    if (!urlsForCheck.ContainsKey(url.Url))
-                        CrawlOneUrlProducer(url.Url);
                     if (cancelTicket)
                         return;
+                    if (!urlsForCheck.ContainsKey(url.Url))
+                        CrawlOneUrlProducer(url.Url); 
                 }
             }
         }
@@ -82,7 +80,7 @@ namespace ClassLibrary.FirstTask
         {
             int threadName = Int32.Parse(Thread.CurrentThread.Name);
             if (!urlsForCheck.ContainsKey(url))
-                result = CrawlOneUrlProducer(url);
+                CrawlOneUrlProducer(url);
             if (!dicitonaryOfCrawledUrls.IsEmpty)
             {
                 if (threadName % 2 == 0)
@@ -91,13 +89,13 @@ namespace ClassLibrary.FirstTask
             }
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
+                if (cancelTicket)
+                    break;
                 if (dicitonaryOfCrawledUrls.Count <= threadName)
                     continue;
                 var temp = dicitonaryOfCrawledUrls.ElementAtOrDefault(threadName);
                 if (temp.Value != null)
                     CrawlUrls(temp.Value);
-                if (cancelTicket)
-                    break;
             }
             logger.Trace("Thread " + Thread.CurrentThread.Name + " finish");
         }
@@ -118,16 +116,17 @@ namespace ClassLibrary.FirstTask
             {
                 while (!dicitonaryOfCrawledUrls.IsEmpty)
                 {
+                    Thread.Sleep(2000);
+                    if (cancelTicket)
+                        break;                   
                     if (Helper.CountForSave(urlsForDBSaving) != 0)
-                    {
-                        PageUrls[] items = new PageUrls[urlsForDBSaving.Where(u => u.Value == false).Count()];
-                        items = Helper.RemoveFromDict(items, dicitonaryOfCrawledUrls, urlsForDBSaving);
-                        items = Helper.AddHostConnection(items, urlsForDBSaving, hosts, measures, _repo);
+                    {                   
+                        PageUrls[] items = new PageUrls[Helper.CountForSave(urlsForDBSaving)];
+                        Helper.RemoveFromDict(items, dicitonaryOfCrawledUrls, urlsForDBSaving);
+                        Helper.AddHostConnection(items, urlsForDBSaving, hosts, measures, _repo);
                         _repo.AddPageOrUpdate(items.ToList());
                         logger.Trace("Save or update to DB " + items.Length + " pages");
-                    }
-                    if (cancelTicket)
-                        break;
+                    }                        
                     flagDB = false;
                 }
                 if (cancelTicket)
@@ -148,38 +147,7 @@ namespace ClassLibrary.FirstTask
             urlsForCheck.Clear();
             urlsForDBSaving.Clear();
             hosts.Clear();
-            result = null;
-        }
-        public PageUrls[] AddHostConnection(PageUrls[] items, ConcurrentDictionary<string, bool> urlsForDBSaving)//, ConcurrentDictionary<string, int> hosts, IRepository repo)
-        {
-            items = items.Where(c => c != null).ToArray();
-            for (int i = 0; i < items.Length; i++)
-            {
-                var hostName = measures.HostFullAdr(items[i].Url);
-                if (hosts.ContainsKey(hostName))
-                {
-                    items[i].Fk_Hosts_Id = hosts[hostName];
-                }
-                else
-                {
-                    int? hostId = _repo.GetHostIdIfExist(hostName);
-                    if (hostId != null)
-                    {
-                        hosts.TryAdd(hostName, (int)hostId);
-                        items[i].Fk_Hosts_Id = (int)hostId;
-                    }
-                    else
-                    {
-                        _repo.AddHost(hostName);
-                        hostId = (int)_repo.GetHostIdIfExist(hostName);
-                        hosts.TryAdd(hostName, (int)hostId);
-                        items[i].Fk_Hosts_Id = (int)hostId;
-                    }
-                }
-                urlsForDBSaving[items[i].Url] = true;
-            }
-            return items;
-        }
+        }     
         public void Dispose()
         {
             _repo.Dispose();

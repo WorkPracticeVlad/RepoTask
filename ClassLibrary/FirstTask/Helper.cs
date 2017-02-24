@@ -12,7 +12,7 @@ namespace ClassLibrary.FirstTask
     {
         public static PageUrls[] AddHostConnection(PageUrls[] items, ConcurrentDictionary<string, bool> urlsForDBSaving, ConcurrentDictionary<string, int> hosts, Measures measures, IRepository repo)
         {
-            items = items.Where(c => c != null).ToArray();
+            RemoveNulls(items);
             for (int i = 0; i < items.Length; i++)
             {
                 var hostName = measures.HostFullAdr(items[i].Url);
@@ -43,9 +43,7 @@ namespace ClassLibrary.FirstTask
         public static PageUrls[] RemoveFromDict(PageUrls[] items, ConcurrentDictionary<string, PageUrls> dicitonaryOfCrawledUrls, ConcurrentDictionary<string, bool> urlsForDBSaving)
         {
             for (int i = items.Length - 1; i >= 0; i--)
-            {
-                if (dicitonaryOfCrawledUrls.ContainsKey(ItemsForSave(urlsForDBSaving).ElementAt(i).Key))
-                {
+            {                
                     PageUrls temp;
                     dicitonaryOfCrawledUrls.TryGetValue(ItemsForSave(urlsForDBSaving).ElementAt(i).Key, out temp);
                     if (temp != null)
@@ -54,7 +52,6 @@ namespace ClassLibrary.FirstTask
                         TryRemove(temp.Url,
                        out items[i]);
                     }
-                }
             }
             return items;
         }
@@ -65,6 +62,10 @@ namespace ClassLibrary.FirstTask
         static IEnumerable<KeyValuePair<string, bool>> ItemsForSave(ConcurrentDictionary<string, bool> urlsForDBSaving)
         {
             return urlsForDBSaving.Where(u => u.Value == false);
+        }
+        static PageUrls[] RemoveNulls(PageUrls[] items)
+        {
+            return items.Where(c => c != null).ToArray();
         }
     }
 }

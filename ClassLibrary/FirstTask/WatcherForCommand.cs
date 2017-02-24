@@ -19,6 +19,7 @@ namespace ClassLibrary.FirstTask
         IContainer container = Container.For<LibRegistry>();
         Crawling crawler;
         SiteTreeBuilder treeBuilder;
+        const string PATHFORTREEOUT = @"C: \Users\vorlov\Desktop\Tree\SiteTreeOut.txt";
         Measures m = new Measures();
         public void StartWatch(string startOrCancelPath, string treePath)
         {
@@ -68,7 +69,7 @@ namespace ClassLibrary.FirstTask
                 var fullUrl = System.IO.File.ReadAllText(e.FullPath);
                 var fullHost = m.HostFullAdr(fullUrl);
                 treeBuilder = container.GetInstance<SiteTreeBuilder>();
-                treeBuilder.WriteTree(@"C: \Users\vorlov\Desktop\Tree\SiteTreeOut.txt", fullHost);
+                treeBuilder.WriteTree(PATHFORTREEOUT, fullHost);
                 logger.Trace("Build tree for "+fullUrl);
                 watcherForTree.EnableRaisingEvents = true;
             }
@@ -96,12 +97,12 @@ namespace ClassLibrary.FirstTask
             return false;
         }
         void WatchTxt(string path,FileSystemWatcher watcher, FileSystemEventHandler handler)
-        {
-            watcher.Path = path;
-            watcher.NotifyFilter = NotifyFilters.LastWrite;
-            watcher.Filter = "*.txt";
-            watcher.Changed +=handler;
-            watcher.EnableRaisingEvents = true;
+        {          
+                watcher.Path = path;
+                watcher.NotifyFilter = NotifyFilters.LastWrite;
+                watcher.Filter = "*.txt";
+                watcher.Changed += handler;
+                watcher.EnableRaisingEvents = true;           
         }
         public void Dispose()
         {

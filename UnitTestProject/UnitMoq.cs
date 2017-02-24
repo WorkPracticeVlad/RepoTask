@@ -57,16 +57,14 @@ namespace UnitTestProject
             moqRepo.Verify(r => r.AddHost(It.IsAny<string>()), Times.Never());
             moqRepo.Verify(r => r.GetHostIdIfExist(It.IsAny<string>()), Times.Once());
         }
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]      
+        [TestMethod]    
         public void WriteTree_GetUrlsForHost_NoMatchDB()
         {
             var expected = "This is tree\r\nno match in DB\r\n";
             var moqRepo = new Mock<IRepository>();
             moqRepo.Setup(r => r.GetUrlsForHost(It.IsAny<string>())).Returns(new List<string>());
             var siteTreeBuilder = new SiteTreeBuilder(moqRepo.Object);
-            var temp = siteTreeBuilder.WriteTree("path", It.IsAny<string>());   
-            Assert.AreEqual(expected, temp);
+            Assert.AreEqual(expected, siteTreeBuilder.WriteTree("path", It.IsAny<string>()));
         }
         [TestMethod]
         public void CountForSave_Dict_Conut()

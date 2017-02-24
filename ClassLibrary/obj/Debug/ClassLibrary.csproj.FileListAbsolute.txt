@@ -16,3 +16,4 @@ C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ClassLibrary\bin\
 C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ClassLibrary\bin\Debug\NLog.xml
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibrary\bin\Debug\Topshelf.dll
 C:\Users\vorlov\documents\visual studio 2015\Projects\FistTask\ClassLibrary\bin\Debug\Topshelf.xml
+C:\Users\vorlov\Documents\Visual Studio 2015\Projects\FistTask\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

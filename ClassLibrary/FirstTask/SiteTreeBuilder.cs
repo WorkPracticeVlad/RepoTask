@@ -37,8 +37,7 @@ namespace ClassLibrary.FirstTask
                 File.WriteAllText(path, createText);
             }
             string appendText = "This is tree" + Environment.NewLine + BuildTreeString(urls)+ Environment.NewLine;
-            File.AppendAllText(path, appendText);
-            //string readText = File.ReadAllText(path);
+            File.AppendAllText(path, appendText);           
             return appendText;
         }
         public void Dispose()

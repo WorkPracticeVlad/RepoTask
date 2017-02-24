@@ -1,0 +1,100 @@
+
+CREATE TABLE Hosts
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Host nvarchar(450) NOT NULL 
+)
+CREATE TABLE PageUrls
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Url nvarchar(max) NOT NULL,
+LoadTime INTEGER,
+HtmlSize INTEGER,
+Fk_Hosts_Id INTEGER NOT NULL FOREIGN KEY REFERENCES Hosts(Id)
+)
+go
+CREATE TABLE CssLinks
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Css nvarchar(max),
+Fk_PageUrls_Id INTEGER NOT NULL FOREIGN KEY REFERENCES PageUrls(Id)
+)
+go
+CREATE TABLE ImgSources
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Scr nvarchar(max) ,
+Fk_PageUrls_Id INTEGER NOT NULL FOREIGN KEY REFERENCES PageUrls(Id)
+)
+go
+CREATE TABLE InternalUrls
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Url nvarchar(max) NOT NULL,
+Fk_PageUrls_Id INTEGER NOT NULL FOREIGN KEY REFERENCES PageUrls(Id)
+)
+go
+CREATE TABLE ExternalUrls
+(
+Id int IDENTITY(1,1) PRIMARY KEY,
+Url nvarchar(max) NOT NULL,
+Fk_PageUrls_Id INTEGER NOT NULL FOREIGN KEY REFERENCES PageUrls(Id)
+)
+go
+CREATE VIEW AvgResponsePerHost AS
+select Hosts.Host , avg(PageUrls.LoadTime) as AverageResponse from PageUrls
+inner join Hosts on
+[dbo].[Hosts].Id = PageUrls.Fk_Hosts_Id
+group by Hosts.Host;
+go
+CREATE VIEW PagesPerHost AS
+select Hosts.Host , COUNT(PageUrls.Id) as TotalNubmerOfPages from PageUrls
+inner join Hosts on
+[dbo].[Hosts].Id = PageUrls.Fk_Hosts_Id
+group by Hosts.Host;
+go
+CREATE VIEW TopExternalLinkCountPerPage AS
+select top 10 PageUrls.Url , COUNT([dbo].[ExternalUrls].Id) as NumberOfExternalLinks
+from PageUrls inner join [dbo].[ExternalUrls]
+on PageUrls.Id=[dbo].[ExternalUrls].Fk_PageUrls_Id
+group by PageUrls.Url
+order by NumberOfExternalLinks desc;
+go
+CREATE VIEW TopFastesPerHost AS
+select h.Host, p.Url, p.LoadTime 
+ from [dbo].[Hosts] as h 
+ cross apply 
+     (select top 10 PageUrls.Url, PageUrls.LoadTime
+      from PageUrls 
+      where PageUrls.Fk_Hosts_Id = h.Id and (PageUrls.LoadTime is not null or PageUrls.LoadTime=0)
+      order by PageUrls.LoadTime asc) as p;
+go
+CREATE VIEW TopSlowestPerHost AS
+select h.Host, p.Url, p.LoadTime 
+ from [dbo].[Hosts] as h 
+ cross apply 
+     (select top 10 PageUrls.Url, PageUrls.LoadTime
+      from PageUrls 
+      where PageUrls.Fk_Hosts_Id = h.Id and (PageUrls.LoadTime is not null or PageUrls.LoadTime=0)
+      order by PageUrls.LoadTime desc) as p;
+go
+CREATE VIEW  TopTotalLinkCountPerPage AS
+select top 10 a.Url, (NumberOfInternalLinks+ NumberOfExternalLinks) as TotalCount
+from
+(select PageUrls.Url , COUNT([dbo].[InternalUrls].Id) as NumberOfInternalLinks
+from PageUrls inner join [dbo].[InternalUrls]
+on PageUrls.Id=[dbo].[InternalUrls].Fk_PageUrls_Id
+group by PageUrls.Url) as a
+join
+(select PageUrls.Url , COUNT([dbo].[ExternalUrls].Id) as NumberOfExternalLinks
+from PageUrls inner join [dbo].[ExternalUrls]
+on PageUrls.Id=[dbo].[ExternalUrls].Fk_PageUrls_Id
+group by PageUrls.Url) as b
+on a.Url=b.Url
+order by TotalCount desc
+go
+CREATE INDEX HostIndex
+ON Hosts (Host)
+go
+CREATE INDEX LoadTimeIndex
+ON PageUrls (LoadTime)
