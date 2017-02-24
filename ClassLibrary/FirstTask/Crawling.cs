@@ -91,6 +91,8 @@ namespace ClassLibrary.FirstTask
             }
             while (!dicitonaryOfCrawledUrls.IsEmpty)
             {
+                if (dicitonaryOfCrawledUrls.Count <= threadName)
+                    continue;
                 var temp = dicitonaryOfCrawledUrls.ElementAtOrDefault(threadName);
                 if (temp.Value != null)
                     CrawlUrls(temp.Value);
@@ -116,24 +118,11 @@ namespace ClassLibrary.FirstTask
             {
                 while (!dicitonaryOfCrawledUrls.IsEmpty)
                 {
-                    if (urlsForDBSaving.Where(u => u.Value == false).Count() != 0)
+                    if (Helper.CountForSave(urlsForDBSaving) != 0)
                     {
                         PageUrls[] items = new PageUrls[urlsForDBSaving.Where(u => u.Value == false).Count()];
-                        for (int i = items.Length - 1; i >= 0; i--)
-                        {
-                            if (dicitonaryOfCrawledUrls.ContainsKey(urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key))
-                            {
-                                PageUrls temp;
-                                dicitonaryOfCrawledUrls.TryGetValue(urlsForDBSaving.Where(u => u.Value == false).ElementAt(i).Key, out temp);
-                                if (temp != null)
-                                {
-                                    dicitonaryOfCrawledUrls.
-                                    TryRemove(temp.Url,
-                                   out items[i]);
-                                }
-                            }
-                        }
-                        items = AddHostConnection(items, urlsForDBSaving);//,hosts,_repo);
+                        items = Helper.RemoveFromDict(items, dicitonaryOfCrawledUrls, urlsForDBSaving);
+                        items = Helper.AddHostConnection(items, urlsForDBSaving, hosts, measures, _repo);
                         _repo.AddPageOrUpdate(items.ToList());
                         logger.Trace("Save or update to DB " + items.Length + " pages");
                     }

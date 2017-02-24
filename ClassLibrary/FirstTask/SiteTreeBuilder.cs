@@ -17,6 +17,8 @@ namespace ClassLibrary.FirstTask
         private IRepository _repo;
         string BuildTreeString( List<string> urls)
         {
+            if (urls.Count == 0)
+                return "no match in DB";
             var builder = new StringBuilder();
             urls.Sort();
             foreach (var i in urls)
@@ -25,9 +27,10 @@ namespace ClassLibrary.FirstTask
             }
             return builder.ToString();
         }
-        public void WriteTree(string path, string url)
+        public string WriteTree(string path, string url)
         {
-            List<string> urls = _repo.GetUrlsForHost(url);
+            var urls = new List<string>();
+            urls = _repo.GetUrlsForHost(url);
             if (!File.Exists(path))
             {
                 string createText = "Hello and Welcome " + Environment.NewLine;
@@ -35,7 +38,8 @@ namespace ClassLibrary.FirstTask
             }
             string appendText = "This is tree" + Environment.NewLine + BuildTreeString(urls)+ Environment.NewLine;
             File.AppendAllText(path, appendText);
-            string readText = File.ReadAllText(path);
+            //string readText = File.ReadAllText(path);
+            return appendText;
         }
         public void Dispose()
         {

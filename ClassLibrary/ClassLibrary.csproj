@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Data\Repository.cs" />
     <Compile Include="FirstTask\Crawling.cs" />
+    <Compile Include="FirstTask\Helper.cs" />
     <Compile Include="FirstTask\Measures.cs" />
     <Compile Include="FirstTask\SiteTreeBuilder.cs" />
     <Compile Include="FirstTask\WatcherForCommand.cs" />

@@ -42,7 +42,7 @@ namespace ClassLibrary.FirstTask
                     watcherForCrawl.EnableRaisingEvents = true;
                     logger.Trace("Start crawl "+splitCommand[0]+" in "+splitCommand[1]+" threads");
                     Task.Run(() => crawler.StartCrawl(splitCommand[0], Int32.Parse(splitCommand[1])));
-                    logger.Trace("Start crawl Task finsh");
+                    logger.Trace("Start crawl Task job done");
                 }
                 else
                 {

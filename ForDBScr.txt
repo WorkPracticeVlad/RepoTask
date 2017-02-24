@@ -84,12 +84,13 @@ from
 (select PageUrls.Url , COUNT([dbo].[InternalUrls].Id) as NumberOfInternalLinks
 from PageUrls inner join [dbo].[InternalUrls]
 on PageUrls.Id=[dbo].[InternalUrls].Fk_PageUrls_Id
-group by PageUrls.Url) as a,
+group by PageUrls.Url) as a
+join
 (select PageUrls.Url , COUNT([dbo].[ExternalUrls].Id) as NumberOfExternalLinks
 from PageUrls inner join [dbo].[ExternalUrls]
 on PageUrls.Id=[dbo].[ExternalUrls].Fk_PageUrls_Id
 group by PageUrls.Url) as b
-where a.Url=b.Url
+on a.Url=b.Url
 order by TotalCount desc
 go
 CREATE INDEX HostIndex

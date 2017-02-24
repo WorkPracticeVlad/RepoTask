@@ -27,23 +27,7 @@ namespace ConsoleApplication
                 configure.SetServiceName("MyWindowServiceWithTopshelf");
                 configure.SetDisplayName("MyWindowServiceWithTopshelf");
                 configure.SetDescription("MyWindowServiceWithTopshelf");
-            });
-            //WorkConsApp();
-        }
-        static void WorkConsApp()
-        {
-            var con = Container.For<LibRegistry>();
-            var wt = con.GetInstance<WatcherForCommand>();
-            Logger lgr = LogManager.GetCurrentClassLogger();
-            try
-            {            
-                wt.StartWatch(@"C:\Users\vorlov\Desktop\FistTaskStart", @"C:\Users\vorlov\Desktop\BuildTree");
-            }
-            catch (Exception ex)
-            {
-                lgr.Error(ex.Message + Environment.NewLine + ex.InnerException);
-            }
-            Console.ReadKey();
+            });           
         }
     }
 }

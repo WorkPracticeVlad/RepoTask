@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 namespace UnitTestProject
 {
     [TestClass]
-    public class UnitRepUsePath
+    public class UnitMoq
     {
         [TestMethod]
         public void Dispose_IsCalled_OnceCrawling()
@@ -44,25 +44,40 @@ namespace UnitTestProject
             moqWatcher.Object.StartWatch("path", "path");
         }
         [TestMethod]
-        public void AddHostConnection_Add_Save()
+        public void AddHostConnection_Add_NoSave()
         {
-            var urlsSave= new ConcurrentDictionary<string, bool>();
+            var urlsSave = new ConcurrentDictionary<string, bool>();
             urlsSave.TryAdd("Url", false);
-            var pages = new PageUrls[]{ new PageUrls() {Url="Url" } };
+            var hosts = new ConcurrentDictionary<string, int>();
+            hosts.TryAdd("host", 0);
+            var pages = new PageUrls[] { new PageUrls() { Url = "Url" } };
             var moqRepo = new Mock<IRepository>();
-            var crawl = new Crawling(moqRepo.Object);           
             moqRepo.Setup(r => r.GetHostIdIfExist(It.IsAny<string>())).Returns(It.IsAny<int>());
-            crawl.AddHostConnection(pages, urlsSave);
-            moqRepo.Verify(r=>r.AddHost(It.IsAny<string>()), Times.Never());
+            Helper.AddHostConnection(pages, urlsSave, hosts, new Measures(), moqRepo.Object);
+            moqRepo.Verify(r => r.AddHost(It.IsAny<string>()), Times.Never());
+            moqRepo.Verify(r => r.GetHostIdIfExist(It.IsAny<string>()), Times.Once());
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]      
-        public void WriteTree_GetUrlsForHost()
+        public void WriteTree_GetUrlsForHost_NoMatchDB()
         {
+            var expected = "This is tree\r\nno match in DB\r\n";
             var moqRepo = new Mock<IRepository>();
+            moqRepo.Setup(r => r.GetUrlsForHost(It.IsAny<string>())).Returns(new List<string>());
             var siteTreeBuilder = new SiteTreeBuilder(moqRepo.Object);
-            siteTreeBuilder.WriteTree("path", It.IsAny<string>());
-            moqRepo.Setup(r => r.GetUrlsForHost(It.IsAny<string>())).Returns(new List<string>() { { "string" } });     
+            var temp = siteTreeBuilder.WriteTree("path", It.IsAny<string>());   
+            Assert.AreEqual(expected, temp);
+        }
+        [TestMethod]
+        public void CountForSave_Dict_Conut()
+        {
+            var expected = 2;
+            var dictionaryTest = new ConcurrentDictionary<string, bool>();
+            dictionaryTest.TryAdd("q", true);
+            dictionaryTest.TryAdd("w", false);
+            dictionaryTest.TryAdd("e", false);
+            var count = Helper.CountForSave(dictionaryTest);
+            Assert.AreEqual(expected, count);
         }
     }
 }

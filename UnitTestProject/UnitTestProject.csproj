@@ -86,7 +86,7 @@
   <ItemGroup>
     <Compile Include="UnitTestMeasures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitRepUsePath.cs" />
+    <Compile Include="UnitMoq.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
